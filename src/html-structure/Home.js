@@ -4,8 +4,7 @@ import './homestyle.scss'
 import logoOne from '../assets/img/logo1.png'
 import cryptoHeroTwo from '../assets/img/cryptohero2.png'
 import cryptoHeroThree from '../assets/img/cryptohero3.png'
-
-
+import Featured from '../apicall/Featured'
 
 const Home = () => {
   
@@ -57,15 +56,18 @@ const Home = () => {
         <p id='highlight' className='leading-[4rem] text-center underline text-2xl'>Tudo em um só lugar.</p>
         <p id='left1' className='mt-[1.2rem]'>Acompanhe suas moedas favoritas em tempo real.
          Nós da CryptoView garantimos aproximadamente 95% de precisão em nossas análises.<br></br>
-         Contamos com um time mundialmente conhecidos e com <em className='font-bold not-italic'>informações secretas</em> que nos
-         ajudam a garantir um retorno posivo para os nossos parceiros!</p>
+         Contamos com um time mundialmente conhecido e com <em className='font-bold not-italic'>informações secretas</em> que nos
+         ajudam a garantir um retorno positivo para os nossos parceiros!</p>
         <div id='newsletter-div' className='flex flex-col items-center'>
-          <p className='text-center mt-[3rem]'>Inscreva-se para ser atualizado sempre que tivermos novas informações:</p>
+          <p className='text-center mt-[2rem]'>Inscreva-se para ser atualizado sempre que tivermos novas informações:</p>
           <form id='submit-newsletter' className='m-auto'>
             <input id='input-newsletter' type='mail' placeholder='youremail@something.com' className='w-[30rem] h-[3rem] mt-[2.5px] border-1 rounded-[5px]'>
             </input>
             <span id='sub-button'><a href="#"></a></span>
           </form>
+        </div>
+        <div className='italic ml-[5rem] text-xs'>
+          <p>Powered by <a href='https://www.coingecko.com/pt' target='_blank'>CoinGecko</a></p>
         </div>
       </div>
       <div id='right-img' className='w-[50%]'>
@@ -81,14 +83,22 @@ const Home = () => {
     <br></br>
     <br></br>
     
-    <div id='second-half-homepage' className='bg-[#f2e8de] text-[#1f1f1f]'>
-      <h1>Teste</h1>
-      <h1>Teste</h1>
-      <h1>Teste</h1>
-      <h1>Teste</h1>
-    </div>
+    <div id='featured' className='bg-[#f2e8de] text-[#1f1f1f] flex'>
+      <div id='second-container' className=''>
+        <div id='left' className='flex flex-col justify-center text-center m-auto'>
+          <p className=''>Explore top crypto's like Bitcoin, Ethereum, and Dogecoin</p>
+          <p className=''>See all available assets: Cryptocurrencies and NFT's</p>
+          <button id='btn'>See More Coins</button>
+        </div>
+
+        <div id='coin-indexes' className=''>
+          <Featured/>
+        </div>
+
+      </div>
+    </div>      
 
   </>)
 }
 
-export default Home
+export default Home 

@@ -6,7 +6,7 @@
 }
 
 *{
-  border: 1px solid transparent;
+  border: 1px solid red;
 }
 
 
@@ -167,6 +167,3 @@
   100% { transform: translateY(15px); opacity: 0;}
 }
 
-#second-half-homepage{
-  background: linear-gradient(105deg, black 25%, yellow 25%)
-}
