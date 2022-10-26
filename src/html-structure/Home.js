@@ -5,6 +5,8 @@ import logoOne from '../assets/img/logo1.png'
 import cryptoHeroTwo from '../assets/img/cryptohero2.png'
 import cryptoHeroThree from '../assets/img/cryptohero3.png'
 import Featured from '../apicall/Featured'
+import pcOne from '../assets/img/pc1.png'
+import { FiPlus } from "react-icons/fi";
 
 const Home = () => {
   
@@ -83,19 +85,45 @@ const Home = () => {
     <br></br>
     <br></br>
     
-    <div id='featured' className='bg-[#f2e8de] text-[#1f1f1f] flex justify-center pl-[6rem] pr-[6rem]'>
+    <div id='featured' className=' text-[#1f1f1f] flex justify-center pl-[6rem] pr-[6rem]'>
       <div id='second-container' className=''>
         <div id='left' className='flex flex-col justify-center text-center m-auto'>
-          <p className='text-3xl font-bold'>Explore top crypto's like Bitcoin, Ethereum, and Dogecoin</p>
+          <p className='text-3xl font-bold mt-[1rem]'>Explore top crypto's like Bitcoin, Ethereum, and Dogecoin</p>
           <p className='text-2xl font-semibold'>See all available assets: Cryptocurrencies and NFT's</p>
         </div>
 
-        <div id='coin-indexes' className=''>
+        <div id='coin-indexes' className='flex justify-center'>
           <Featured/>
         </div>
 
+        <div className=''>
+          <p id='btn-ver-mais' className='text-[#1f1f1f]'><a className='flex items-center' href='/'><FiPlus id='plus-icon'/><span></span>Ver mais moedas</a></p>
+        </div>
+
+        
+
+        <div id='featured-second' className='mt-[2rem]'>
+          <div id='second-content' className='flex justify-evenly'>
+            <img src={pcOne} alt='/' id='img-signup' className='w-[600px]'/>
+            <div className='w-[40%] flex flex-col justify-center items-center'>
+              <p className='text-[3rem] font-bold uppercase'>Ganhe de forma passiva</p>
+              <p className='text-[1.4rem] mt-[0.5rem] font-semibold text-center'>Earn up to 12% annual rewards on 30+ digital assets. Simply hold your assets in 
+                the app to automatically earn rewards at the end of each month with no lockups 
+                and no limits.</p>
+                <div className='flex mt-[1rem]'>
+                  <input id='subtwo' className='w-[400px]' type="email" placeholder="Enter your email"></input>
+                  <button id='btn-ver-mais-two' className='text-[#f2e8de]'>Cadastrar</button>
+                </div>
+            </div>
+          </div>
+        </div>
+
       </div>
-    </div>      
+    </div>
+
+    <div id='footer' className='text-[#f2e8de] flex justify-center pl-[6rem] pr-[6rem]'>
+    
+    </div>   
 
   </>)
 }
