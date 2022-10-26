@@ -83,12 +83,11 @@ const Home = () => {
     <br></br>
     <br></br>
     
-    <div id='featured' className='bg-[#f2e8de] text-[#1f1f1f] flex'>
+    <div id='featured' className='bg-[#f2e8de] text-[#1f1f1f] flex justify-center pl-[6rem] pr-[6rem]'>
       <div id='second-container' className=''>
         <div id='left' className='flex flex-col justify-center text-center m-auto'>
-          <p className=''>Explore top crypto's like Bitcoin, Ethereum, and Dogecoin</p>
-          <p className=''>See all available assets: Cryptocurrencies and NFT's</p>
-          <button id='btn'>See More Coins</button>
+          <p className='text-3xl font-bold'>Explore top crypto's like Bitcoin, Ethereum, and Dogecoin</p>
+          <p className='text-2xl font-semibold'>See all available assets: Cryptocurrencies and NFT's</p>
         </div>
 
         <div id='coin-indexes' className=''>
