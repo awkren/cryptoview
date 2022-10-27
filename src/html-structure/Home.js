@@ -63,7 +63,7 @@ const Home = () => {
         <div id='newsletter-div' className='flex flex-col items-center'>
           <p className='text-center mt-[2rem]'>Inscreva-se para ser atualizado sempre que tivermos novas informações:</p>
           <form id='submit-newsletter' className='m-auto'>
-            <input id='input-newsletter' type='mail' placeholder='youremail@something.com' className='w-[30rem] h-[3rem] mt-[2.5px] border-1 rounded-[5px]'>
+            <input id='input-newsletter' type='mail' placeholder='seuemail@blablabla.com.br' className='w-[30rem] h-[3rem] mt-[2.5px] border-1 rounded-[5px]'>
             </input>
             <span id='sub-button'><a href="#"></a></span>
           </form>
@@ -107,11 +107,11 @@ const Home = () => {
             <img src={pcOne} alt='/' id='img-signup' className='w-[600px]'/>
             <div className='w-[40%] flex flex-col justify-center items-center'>
               <p className='text-[3rem] font-bold uppercase'>Ganhe de forma passiva</p>
-              <p className='text-[1.4rem] mt-[0.5rem] font-semibold text-center'>Earn up to 12% annual rewards on 30+ digital assets. Simply hold your assets in 
-                the app to automatically earn rewards at the end of each month with no lockups 
-                and no limits.</p>
+              <p className='text-[1.4rem] mt-[0.5rem] font-semibold text-center'>Ganhe até 12% de recompensas anuais em mais de 30 ativos digitais. Basta manter seus ativos
+                no aplicativo para ganhar recompensas automaticamente no final de cada mês sem burocracia
+                 e sem limites.</p>
                 <div className='flex mt-[1rem]'>
-                  <input id='subtwo' className='w-[400px]' type="email" placeholder="Enter your email"></input>
+                  <input id='subtwo' className='w-[400px]' type="email" placeholder="Insira seu melhor email"></input>
                   <button id='btn-ver-mais-two' className='text-[#f2e8de]'>Cadastrar</button>
                 </div>
             </div>
