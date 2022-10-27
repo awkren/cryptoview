@@ -97,7 +97,7 @@ const Home = () => {
         </div>
 
         <div className=''>
-          <p id='btn-ver-mais' className='text-[#1f1f1f]'><a className='flex items-center' href='/'><FiPlus id='plus-icon'/><span></span>Ver mais moedas</a></p>
+          <p id='btn-ver-mais' className='text-[#1f1f1f] underline'><a className='flex items-center' href='/'><FiPlus id='plus-icon'/><span></span>Ver mais moedas</a></p>
         </div>
 
         
@@ -121,8 +121,33 @@ const Home = () => {
       </div>
     </div>
 
-    <div id='footer' className='text-[#f2e8de] flex justify-center pl-[6rem] pr-[6rem]'>
-    
+    <div id='footer' className='text-[#f2e8de] flex justify-around ml-[6rem] mr-[6rem]'>
+      <div id='footer-logo' className='flex flex-col justify-center'>
+        <p className='text-4xl font-bold'>CryptoView</p>
+        <p>+55 00 0000-0000</p>
+        <p>cryptoview@cryptoview.br</p>
+      </div>
+      <div id='footer-left'>
+        <p id='title-left-footer' className='text-[1.5rem] font-semibold underline'>Suporte</p>
+        <p>Fale Conosco</p>
+        <p>Chat</p>
+        <p>FAQ</p>
+        <p>Ajuda</p>
+      </div>
+      <div id='footer-middle'>
+        <p id='title-middle-footer' className='text-[1.5rem] font-semibold underline'>Desenvolvedores</p>
+        <p>Documentação</p>
+        <p>API</p>
+        <p>E-Commerce</p>
+        <p>Nuvem</p>
+      </div>
+      <div id='footer-right'>
+        <p id='title-right-footer' className='text-[1.5rem] font-semibold underline'>Empresa</p>
+        <p>Investimentos</p>
+        <p>Sobre</p>
+        <p>Documentação Legal</p>
+        <p>Privacidade</p>
+      </div>
     </div>   
 
   </>)

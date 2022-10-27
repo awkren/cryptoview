@@ -96,21 +96,21 @@ const Featured = () => {
                 {/* fourth coin */}
                 <div id='card' className='text-center'>
                     <div id='top'>
-                        <img src={data[89].image} alt='/' id='img-coin' class='resize'/>
+                        <img src={data[8].image} alt='/' id='img-coin' class='resize'/>
                     </div>
                     <div>
-                        <p className='text-[1rem] font-medium capitalize text-center mt-[-5px]'>{data[89].name}</p>
-                        <p className='font-bold text-[1rem] mt-[0] text-center'>${data[89].current_price.toLocaleString()}</p>
+                        <p className='text-[1rem] font-medium capitalize text-center mt-[-5px]'>{data[8].name}</p>
+                        <p className='font-bold text-[1rem] mt-[0] text-center'>${data[8].current_price.toLocaleString()}</p>
                     </div>
-                    {data[89].price_change_percentage_24h < 0 ? (
+                    {data[8].price_change_percentage_24h < 0 ? (
                         <span id='red'>
                             <FiArrowDown id='icon'/>
-                            {data[89].price_change_percentage_24h.toFixed(2)}%
+                            {data[8].price_change_percentage_24h.toFixed(2)}%
                         </span>
                     ) : (
                         <span id='green'>
                             <FiArrowUpRight id='icon'/>
-                            {data[89].price_change_percentage_24h.toFixed(2)}%
+                            {data[8].price_change_percentage_24h.toFixed(2)}%
                         </span>
                     )}
                 </div>
