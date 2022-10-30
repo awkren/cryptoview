@@ -96,6 +96,118 @@ const Featured = () => {
                 {/* fourth coin */}
                 <div id='card' className='text-center'>
                     <div id='top'>
+                        <img src={data[3].image} alt='/' id='img-coin' class='resize'/>
+                    </div>
+                    <div>
+                        <p className='text-[1rem] font-medium capitalize text-center mt-[-5px]'>{data[3].name}</p>
+                        <p className='font-bold text-[1rem] mt-[0] text-center'>${data[3].current_price.toLocaleString()}</p>
+                    </div>
+                    {data[3].price_change_percentage_24h < 0 ? (
+                        <span id='red'>
+                            <FiArrowDown id='icon'/>
+                            {data[3].price_change_percentage_24h.toFixed(2)}%
+                        </span>
+                    ) : (
+                        <span id='green'>
+                            <FiArrowUpRight id='icon'/>
+                            {data[3].price_change_percentage_24h.toFixed(2)}%
+                        </span>
+                    )}
+                </div>
+                
+                {/* fifth coin */}
+                <div id='card' className='text-center'>
+                    <div id='top'>
+                        <img src={data[4].image} alt='/' id='img-coin' />
+                    </div>
+                    <div>
+                        <p className='text-[1rem] font-medium capitalize text-center mt-[-5px]'>{data[4].name}</p>
+                        <p className='font-bold text-[1rem] mt-[0] text-center'>${data[4].current_price.toLocaleString()}</p>
+                    </div>
+                    {data[4].price_change_percentage_24h < 0 ? (
+                        <span id='red'>
+                            <FiArrowDown id='icon'/>
+                            {data[4].price_change_percentage_24h.toFixed(2)}%
+                        </span>
+                    ) : (
+                        <span id='green'>
+                            <FiArrowUpRight id='icon'/>
+                            {data[4].price_change_percentage_24h.toFixed(2)}%
+                        </span>
+                    )}
+                </div>
+            </div>
+            {/* 2nd */}
+            <div id='second-row-coins' className='flex justify-center'>
+                {/* first coin */}
+                <div id='card' className='text-center'>
+                    <div id='top'>
+                        <img src={data[9].image} alt='/' id='img-coin' />
+                    </div>
+                    <div>
+                        <p className='text-[1rem] font-medium capitalize text-center mt-[-5px]'>{data[9].name}</p>
+                        <p className='font-bold text-[1rem] mt-[0] text-center'>${data[9].current_price.toLocaleString()}</p>
+                    </div>
+                    {data[9].price_change_percentage_24h < 0 ? (
+                        <span id='red'>
+                            <FiArrowDown id='icon'/>
+                            {data[9].price_change_percentage_24h.toFixed(2)}%
+                        </span>
+                    ) : (
+                        <span id='green'>
+                            <FiArrowUpRight id='icon'/>
+                            {data[9].price_change_percentage_24h.toFixed(2)}%
+                        </span>
+                    )}
+                </div>
+
+                {/* second coin */}
+                <div id='card' className='text-center'>
+                    <div id='top'>
+                        <img src={data[6].image} alt='/' id='img-coin' />
+                    </div>
+                    <div>
+                        <p className='text-[1rem] font-medium capitalize text-center mt-[-5px]'>{data[6].name}</p>
+                        <p className='font-bold text-[1rem] mt-[0] text-center'>${data[6].current_price.toLocaleString()}</p>
+                    </div>
+                    {data[6].price_change_percentage_24h < 0 ? (
+                        <span id='red'>
+                            <FiArrowDown id='icon'/>
+                            {data[6].price_change_percentage_24h.toFixed(2)}%
+                        </span>
+                    ) : (
+                        <span id='green'>
+                            <FiArrowUpRight id='icon'/>
+                            {data[6].price_change_percentage_24h.toFixed(2)}%
+                        </span>
+                    )}
+                </div>
+
+                {/* third coin */}
+                <div id='card' className='text-center'>
+                    <div id='top'>
+                        <img src={data[7].image} alt='/' id='img-coin'/>
+                    </div>
+                    <div>
+                        <p className='text-[1rem] font-medium capitalize text-center mt-[-5px]'>{data[7].name}</p>
+                        <p className='font-bold text-[1rem] mt-[0] text-center'>${data[7].current_price.toLocaleString()}</p>
+                    </div>
+                    {data[7].price_change_percentage_24h < 0 ? (
+                        <span id='red'>
+                            <FiArrowDown id='icon'/>
+                            {data[7].price_change_percentage_24h.toFixed(2)}%
+                        </span>
+                    ) : (
+                        <span id='green'>
+                            <FiArrowUpRight id='icon'/>
+                            {data[7].price_change_percentage_24h.toFixed(2)}%
+                        </span>
+                    )}
+                </div>
+
+                {/* fourth coin */}
+                <div id='card' className='text-center'>
+                    <div id='top'>
                         <img src={data[8].image} alt='/' id='img-coin' class='resize'/>
                     </div>
                     <div>
@@ -111,118 +223,6 @@ const Featured = () => {
                         <span id='green'>
                             <FiArrowUpRight id='icon'/>
                             {data[8].price_change_percentage_24h.toFixed(2)}%
-                        </span>
-                    )}
-                </div>
-                
-                {/* fifth coin */}
-                <div id='card' className='text-center'>
-                    <div id='top'>
-                        <img src={data[77].image} alt='/' id='img-coin' />
-                    </div>
-                    <div>
-                        <p className='text-[1rem] font-medium capitalize text-center mt-[-5px]'>{data[77].name}</p>
-                        <p className='font-bold text-[1rem] mt-[0] text-center'>${data[77].current_price.toLocaleString()}</p>
-                    </div>
-                    {data[77].price_change_percentage_24h < 0 ? (
-                        <span id='red'>
-                            <FiArrowDown id='icon'/>
-                            {data[77].price_change_percentage_24h.toFixed(2)}%
-                        </span>
-                    ) : (
-                        <span id='green'>
-                            <FiArrowUpRight id='icon'/>
-                            {data[77].price_change_percentage_24h.toFixed(2)}%
-                        </span>
-                    )}
-                </div>
-            </div>
-            {/* 2nd */}
-            <div id='second-row-coins' className='flex justify-center'>
-                {/* first coin */}
-                <div id='card' className='text-center'>
-                    <div id='top'>
-                        <img src={data[46].image} alt='/' id='img-coin' />
-                    </div>
-                    <div>
-                        <p className='text-[1rem] font-medium capitalize text-center mt-[-5px]'>{data[46].name}</p>
-                        <p className='font-bold text-[1rem] mt-[0] text-center'>${data[46].current_price.toLocaleString()}</p>
-                    </div>
-                    {data[46].price_change_percentage_24h < 0 ? (
-                        <span id='red'>
-                            <FiArrowDown id='icon'/>
-                            {data[46].price_change_percentage_24h.toFixed(2)}%
-                        </span>
-                    ) : (
-                        <span id='green'>
-                            <FiArrowUpRight id='icon'/>
-                            {data[46].price_change_percentage_24h.toFixed(2)}%
-                        </span>
-                    )}
-                </div>
-
-                {/* second coin */}
-                <div id='card' className='text-center'>
-                    <div id='top'>
-                        <img src={data[52].image} alt='/' id='img-coin' />
-                    </div>
-                    <div>
-                        <p className='text-[1rem] font-medium capitalize text-center mt-[-5px]'>{data[52].name}</p>
-                        <p className='font-bold text-[1rem] mt-[0] text-center'>${data[52].current_price.toLocaleString()}</p>
-                    </div>
-                    {data[52].price_change_percentage_24h < 0 ? (
-                        <span id='red'>
-                            <FiArrowDown id='icon'/>
-                            {data[52].price_change_percentage_24h.toFixed(2)}%
-                        </span>
-                    ) : (
-                        <span id='green'>
-                            <FiArrowUpRight id='icon'/>
-                            {data[52].price_change_percentage_24h.toFixed(2)}%
-                        </span>
-                    )}
-                </div>
-
-                {/* third coin */}
-                <div id='card' className='text-center'>
-                    <div id='top'>
-                        <img src={data[79].image} alt='/' id='img-coin'/>
-                    </div>
-                    <div>
-                        <p className='text-[1rem] font-medium capitalize text-center mt-[-5px]'>{data[79].name}</p>
-                        <p className='font-bold text-[1rem] mt-[0] text-center'>${data[79].current_price.toLocaleString()}</p>
-                    </div>
-                    {data[79].price_change_percentage_24h < 0 ? (
-                        <span id='red'>
-                            <FiArrowDown id='icon'/>
-                            {data[79].price_change_percentage_24h.toFixed(2)}%
-                        </span>
-                    ) : (
-                        <span id='green'>
-                            <FiArrowUpRight id='icon'/>
-                            {data[79].price_change_percentage_24h.toFixed(2)}%
-                        </span>
-                    )}
-                </div>
-
-                {/* fourth coin */}
-                <div id='card' className='text-center'>
-                    <div id='top'>
-                        <img src={data[95].image} alt='/' id='img-coin' class='resize'/>
-                    </div>
-                    <div>
-                        <p className='text-[1rem] font-medium capitalize text-center mt-[-5px]'>{data[95].name}</p>
-                        <p className='font-bold text-[1rem] mt-[0] text-center'>${data[95].current_price.toLocaleString()}</p>
-                    </div>
-                    {data[95].price_change_percentage_24h < 0 ? (
-                        <span id='red'>
-                            <FiArrowDown id='icon'/>
-                            {data[95].price_change_percentage_24h.toFixed(2)}%
-                        </span>
-                    ) : (
-                        <span id='green'>
-                            <FiArrowUpRight id='icon'/>
-                            {data[95].price_change_percentage_24h.toFixed(2)}%
                         </span>
                     )}
                 </div>
