@@ -1,10 +1,14 @@
 
 import './App.css';
-import Home from './html-structure/Home';
+import Header from './html-structure/Header';
+import HomeOne from './html-structure/HomeOne';
 
 function App() {
   return (
-    <Home/>
+    <div>
+      <Header/>
+      <HomeOne/>
+    </div>
   );
 }
 

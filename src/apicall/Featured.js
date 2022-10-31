@@ -19,13 +19,13 @@ const Featured = () => {
     },[]);
 
     // pra ver se tá vindo data :p
-    console.log(data);
+    //console.log(data);
 
     if(!data) return null;
 
     return (<>
                
-        <div className='flex flex-col justify-center flex-wrap pr-[5px] p-[10px]'>
+        <div id='main-coin-display' className='flex flex-col justify-center flex-wrap pr-[5px] p-[10px]'>
             <div id='first-row-coins' className='flex'>
                 {/* first coin */}
                 <div id='card' className='text-center'>

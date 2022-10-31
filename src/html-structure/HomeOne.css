@@ -1,0 +1,56 @@
+.home-one .container {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  margin: 4rem auto;
+  justify-content: center;
+  align-items: center;
+  padding: 1rem;
+  color: var(--text-color);
+}
+
+.home-one .left-side{
+  padding: 1rem;
+}
+
+.home-one .input-email{
+  padding: 1rem 0;
+}
+
+.home-one .right-side{
+  padding: 1rem;
+}
+
+.home-one .img-container{
+  width: 100%;
+  display: flex;
+}
+
+.home-one img{
+  max-width: 85%;
+  margin: auto;
+}
+
+.email-topo{
+  padding: 12px 90px;
+}
+
+.email-topo::placeholder{
+  text-align: center;
+}
+
+@media screen and (max-width:940px){
+  .home-one .container{
+    grid-template-columns: 1fr;
+    margin: 1rem 0;
+  }
+  .mail-container{
+    display: flex;
+    margin-top: .5em;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  .mail-container .btn{
+    width: 50%;
+  }
+}

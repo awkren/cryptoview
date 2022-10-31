@@ -53,3 +53,14 @@
   margin:auto;
   margin-top: -10px;
 }
+
+#main-coin-display{
+
+}
+
+@media screen and (max-width:1240px){
+  #main-coin-display{
+    display: flex;
+    flex-wrap: wrap;
+  }
+}
