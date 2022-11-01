@@ -98,7 +98,7 @@
 /* STYLE HOME CONTENT ONE */
 .home-one{
   background-color: var(--bg-color);
-  height: 100vh;
+  /* height: 100vh; */
 }
 
 .home-one .container {

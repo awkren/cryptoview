@@ -24,7 +24,7 @@ const Coins = () => {
             <div className='container'>
                 {/* {Left Side} */}
                 <div className='left'>
-                    <h2 className='text-3xl'>Acompanhe moedas como Bitcoin, Ethereum, e Tether</h2>
+                    <p className='text-3xl'>Acompanhe moedas como Bitcoin, Ethereum, Tether e muito mais</p>
                     <p className='text-3xl'>Garantimos <em className='not-italic font-semibold'>uptime de 99%</em>, 24 horas por dia, 7 dias por semana!</p>
                     <button className='btn'>See More Coins</button>
 

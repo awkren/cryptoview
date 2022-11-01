@@ -1,8 +1,9 @@
 .featured {
     width: 100%;
-    padding: 8rem 0;
-    background-color: var(--background);
-    clip-path: polygon(0 0, 100% 10%, 100% 100%, 0 90%);
+    padding: 3rem 0;
+    background-color: var(--bg-color);
+    /* color: var(--bg-color); */
+    /* clip-path: polygon(0 0, 100% 10%, 100% 100%, 0 90%); */
 }
 
 .featured .container {
@@ -22,6 +23,7 @@
 
 .featured .left p {
     margin: 1.5rem 0;
+    text-align: center;
 }
 
 .featured .left .btn {
@@ -75,7 +77,7 @@
 }
 
 .green {
-    color: var(--primary);
+    color: green;
 }
 
 .red {
@@ -87,6 +89,9 @@
 }
 
 @media screen and (max-width: 940px) {
+    .featured{
+      padding: 1rem 0;
+    }
     .featured .container {
         grid-template-columns: 1fr;
     }
