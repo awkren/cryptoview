@@ -29,7 +29,7 @@ const handleClick = () => setClick(!click);
                 <button className='btn'>Entrar / Registrar</button>
             </div>
             <div className='hamburger' onClick={handleClick}>
-                {click ? (<FaTimes size={20} style={{color: '#f2e8de'}}/>) : (<FaBars size={20} style={{color: '#f2e8de'}}/>)}
+                {click ? (<FaTimes size={20} style={{color: '#1f1f1f'}}/>) : (<FaBars size={20} style={{color: '#1f1f1f'}}/>)}
             </div>
         </div>
 

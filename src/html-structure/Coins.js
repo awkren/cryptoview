@@ -24,9 +24,10 @@ const Coins = () => {
             <div className='container'>
                 {/* {Left Side} */}
                 <div className='left'>
-                    <h2>Explore top crypto's like Bitcoin, Ethereum, and Dogecoin</h2>
-                    <p>See all available assets: Cryptocurrencies and NFT's</p>
+                    <h2 className='text-3xl'>Acompanhe moedas como Bitcoin, Ethereum, e Tether</h2>
+                    <p className='text-3xl'>Garantimos <em className='not-italic font-semibold'>uptime de 99%</em>, 24 horas por dia, 7 dias por semana!</p>
                     <button className='btn'>See More Coins</button>
+
                 </div>
 
 
@@ -177,6 +178,8 @@ const Coins = () => {
                     </div>
                     {/* <span><FiArrowUpRight/>3.5%</span> */}
                 </div>
+                <button className='btn-after'>See More Coins</button>
+
                 {/* {Right Side} */}
             </div>
         </div>

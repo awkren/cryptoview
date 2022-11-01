@@ -5,8 +5,8 @@
 @tailwind utilities;
 
 :root{
-  --text-color: #f2e8de;
-  --bg-color:#1f1f1f;
+  --bg-color: #f2e8de;
+  --text-color:#1f1f1f;
 }
 
 *{
