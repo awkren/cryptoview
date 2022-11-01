@@ -10,7 +10,7 @@ const handleClick = () => setClick(!click);
   {/* HEADER */}
     <div className='header'>
         <div className='container'>
-            <h1 id='logo-text'>CryptoView</h1>
+            <h1 id='logo-text'>Crypto<span>View</span></h1>
             <ul className={click ? 'nav-menu active' : 'nav-menu'}>
                 <li>
                     <a href='/'>Sobre Nós</a>
@@ -47,6 +47,10 @@ const handleClick = () => setClick(!click);
             <div className='mail-container'>
               <input className='email-topo' type='email' placeholder='Insira seu email'/>
               <button className='btn'>Saiba Mais</button>
+              <p className='text-sm'>Powered by <a href='https://www.coingecko.com/' target='_blank'>CoinGecko</a></p>
+              <p className='text-center text-[.9rem] mt-[3rem]'><em>Somos totalmente independentes, não temos vínculo algum com nenhum tipo de instituição
+                pública e/ou privada.</em>
+              </p>
             </div>
           </div>
           <div className='right-side'>

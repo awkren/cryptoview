@@ -40,142 +40,143 @@ const Coins = () => {
                             <img src={data[0].image} alt='/'/>
                         </div>
                         <div>
-                            <h5>{data[0].name}</h5>
-                            <p>${data[0].current_price.toLocaleString()}</p>
+                            <p className='text-[1.3rem]'>{data[0].name}</p>
+                            <p className='font-semibold text-[1.3rem]'>${data[0].current_price.toLocaleString()}</p>
                         </div>
 
                         {data[0].price_change_percentage_24h < 0 ? (
-                            <span className='red'>
-                                <FiArrowDown className='icon'/>
-                                {data[0].price_change_percentage_24h.toFixed(2)}%
+                            <span className='flex red'>
+                                <p><FiArrowDown className='icon'/></p>
+                                <p className='text-[1.2rem]'>{data[0].price_change_percentage_24h.toFixed(2)}%</p>
                             </span>
                         ) : (
-                            <span className='green'>
-                                <FiArrowUpRight className='icon'/>
-                                {data[0].price_change_percentage_24h.toFixed(2)}%
+                            <span className='flex green'>
+                                <p className=''><FiArrowUpRight className='icon'/></p>
+                                <p className='text-[1.2rem]'>{data[0].price_change_percentage_24h.toFixed(2)}%</p>
                             </span>
                         )}
                     </div>
 
-                    {/* second coin | index one */}
+                    {/* second coin */}
                     <div className='card'>
                         <div className='top'>
                             {/* <img src={BTC} alt='/'/> */}
                             <img src={data[1].image} alt='/'/>
                         </div>
                         <div>
-                            <h5>{data[1].name}</h5>
-                            <p>${data[1].current_price.toLocaleString()}</p>
+                            <p className='text-[1.3rem]'>{data[1].name}</p>
+                            <p className='font-semibold text-[1.3rem]'>${data[1].current_price.toLocaleString()}</p>
                         </div>
 
                         {data[1].price_change_percentage_24h < 0 ? (
-                            <span className='red'>
-                                <FiArrowDown className='icon'/>
-                                {data[1].price_change_percentage_24h.toFixed(2)}%
+                            <span className='flex red'>
+                                <p><FiArrowDown className='icon'/></p>
+                                <p className='text-[1.2rem]'>{data[0].price_change_percentage_24h.toFixed(2)}%</p>
                             </span>
                         ) : (
-                            <span className='green'>
-                                <FiArrowUpRight className='icon'/>
-                                {data[1].price_change_percentage_24h.toFixed(2)}%
+                            <span className='flex green'>
+                                <p className=''><FiArrowUpRight className='icon'/></p>
+                                <p className='text-[1.2rem]'>{data[1].price_change_percentage_24h.toFixed(2)}%</p>
                             </span>
                         )}
                     </div>
 
-                    {/* third coin | index two */}
+                    {/* third coin | index zero */}
                     <div className='card'>
                         <div className='top'>
                             {/* <img src={BTC} alt='/'/> */}
                             <img src={data[2].image} alt='/'/>
                         </div>
                         <div>
-                            <h5>{data[2].name}</h5>
-                            <p>${data[2].current_price.toLocaleString()}</p>
+                            <p className='text-[1.3rem]'>{data[2].name}</p>
+                            <p className='font-semibold text-[1.3rem]'>${data[2].current_price.toLocaleString()}</p>
                         </div>
 
                         {data[2].price_change_percentage_24h < 0 ? (
-                            <span className='red'>
-                                <FiArrowDown className='icon'/>
-                                {data[2].price_change_percentage_24h.toFixed(2)}%
+                            <span className='flex red'>
+                                <p><FiArrowDown className='icon'/></p>
+                                <p className='text-[1.2rem]'>{data[0].price_change_percentage_24h.toFixed(2)}%</p>
                             </span>
                         ) : (
-                            <span className='green'>
-                                <FiArrowUpRight className='icon'/>
-                                {data[2].price_change_percentage_24h.toFixed(2)}%
+                            <span className='flex green'>
+                                <p className=''><FiArrowUpRight className='icon'/></p>
+                                <p className='text-[1.2rem]'>{data[2].price_change_percentage_24h.toFixed(2)}%</p>
                             </span>
                         )}
                     </div>
 
-                    {/* fourth coin | index three */}
+                    {/* fourth coin | index zero */}
                     <div className='card'>
                         <div className='top'>
                             {/* <img src={BTC} alt='/'/> */}
                             <img src={data[3].image} alt='/'/>
                         </div>
                         <div>
-                            <h5>{data[3].name}</h5>
-                            <p>${data[3].current_price.toLocaleString()}</p>
+                            <p className='text-[1.3rem]'>{data[3].name}</p>
+                            <p className='font-semibold text-[1.3rem]'>${data[3].current_price.toLocaleString()}</p>
                         </div>
 
                         {data[3].price_change_percentage_24h < 0 ? (
-                            <span className='red'>
-                                <FiArrowDown className='icon'/>
-                                {data[3].price_change_percentage_24h.toFixed(2)}%
+                            <span className='flex red'>
+                                <p><FiArrowDown className='icon'/></p>
+                                <p className='text-[1.2rem]'>{data[3].price_change_percentage_24h.toFixed(2)}%</p>
                             </span>
                         ) : (
-                            <span className='green'>
-                                <FiArrowUpRight className='icon'/>
-                                {data[3].price_change_percentage_24h.toFixed(2)}%
+                            <span className='flex green'>
+                                <p className=''><FiArrowUpRight className='icon'/></p>
+                                <p className='text-[1.2rem]'>{data[3].price_change_percentage_24h.toFixed(2)}%</p>
                             </span>
                         )}
                     </div>
 
-                    {/* fifth coin | index four */}
+                    {/* fifth coin | index zero */}
                     <div className='card'>
                         <div className='top'>
                             {/* <img src={BTC} alt='/'/> */}
                             <img src={data[4].image} alt='/'/>
                         </div>
                         <div>
-                            <h5>{data[4].name}</h5>
-                            <p>${data[4].current_price.toLocaleString()}</p>
+                            <p className='text-[1.3rem]'>{data[4].name}</p>
+                            <p className='font-semibold text-[1.3rem]'>${data[4].current_price.toLocaleString()}</p>
                         </div>
 
                         {data[4].price_change_percentage_24h < 0 ? (
-                            <span className='red'>
-                                <FiArrowDown className='icon'/>
-                                {data[4].price_change_percentage_24h.toFixed(2)}%
+                            <span className='flex red'>
+                                <p><FiArrowDown className='icon'/></p>
+                                <p className='text-[1.2rem]'>{data[4].price_change_percentage_24h.toFixed(2)}%</p>
                             </span>
                         ) : (
-                            <span className='green'>
-                                <FiArrowUpRight className='icon'/>
-                                {data[4].price_change_percentage_24h.toFixed(2)}%
+                            <span className='flex green'>
+                                <p className=''><FiArrowUpRight className='icon'/></p>
+                                <p className='text-[1.2rem]'>{data[4].price_change_percentage_24h.toFixed(2)}%</p>
                             </span>
                         )}
                     </div>
-
-                    {/* sixth coin | index five */}
+                    
+                    {/* sixth coin | index zero */}
                     <div className='card'>
                         <div className='top'>
                             {/* <img src={BTC} alt='/'/> */}
                             <img src={data[5].image} alt='/'/>
                         </div>
                         <div>
-                            <h5>{data[5].name}</h5>
-                            <p>${data[5].current_price.toLocaleString()}</p>
+                            <p className='text-[1.3rem]'>{data[5].name}</p>
+                            <p className='font-semibold text-[1.3rem]'>${data[5].current_price.toLocaleString()}</p>
                         </div>
 
                         {data[5].price_change_percentage_24h < 0 ? (
-                            <span className='red'>
-                                <FiArrowDown className='icon'/>
-                                {data[5].price_change_percentage_24h.toFixed(2)}%
+                            <span className='flex red'>
+                                <p className=''><FiArrowDown className='icon'/></p>
+                                <p className='text-[1.2rem]'>{data[5].price_change_percentage_24h.toFixed(2)}%</p>
                             </span>
                         ) : (
-                            <span className='green'>
-                                <FiArrowUpRight className='icon'/>
-                                {data[5].price_change_percentage_24h.toFixed(2)}%
+                            <span className='flex green'>
+                                <p className=''><FiArrowUpRight className='icon'/></p>
+                                <p className='text-[1.2rem]'>{data[5].price_change_percentage_24h.toFixed(2)}%</p>
                             </span>
                         )}
                     </div>
+
                     {/* <span><FiArrowUpRight/>3.5%</span> */}
                 </div>
                 <button className='btn-after'>See More Coins</button>
