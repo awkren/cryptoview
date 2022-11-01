@@ -1,13 +1,15 @@
 
 import './App.css';
-import Header from './html-structure/Header';
+// import Header from './html-structure/Header';
 import HomeOne from './html-structure/HomeOne';
+import HomeTwo from './html-structure/HomeTwo';
 
 function App() {
   return (
     <div>
-      <Header/>
+      {/* <Header/> */}
       <HomeOne/>
+      <HomeTwo/>
     </div>
   );
 }

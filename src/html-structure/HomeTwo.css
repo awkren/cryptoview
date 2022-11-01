@@ -1,0 +1,9 @@
+.home-two{
+  height: 100vh;
+  color: var(--bg-color);
+  background-color: var(--text-color);
+}
+
+.up-side{
+  text-align: center;
+}

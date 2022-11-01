@@ -12,8 +12,11 @@
 *{
   margin: 0;
   padding: 0;
-  box-sizing: border-box;
-  background-color: var(--bg-color);
+  box-sizing: border-box; 
+}
+
+body{
+  background: var(--bg-color);
 }
 
 ul{
