@@ -18,7 +18,9 @@ const FirstSec = () => {
         <p>CryptoView 2.0 is on it's way</p>
         <p>Get a message when it's ready</p>
       </div>
+
     </div>
+    
   )
 }
 

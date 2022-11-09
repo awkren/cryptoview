@@ -6,7 +6,7 @@ const Header = () => {
   return (
     <div id='header-outer' className=''>
       {/* <img src={topWave} alt='svg-top'/> */}
-    <div id='main-header' className="w-[80%] m-auto flex flex-row justify-around border border-red-500">
+    <div id='main-header' className="w-[80%] mt-[.5rem] m-auto flex flex-row justify-around">
       
       <div id='left-header' className='flex flex-row items-center gap-[5rem] text-[1.5rem]'>
         <p>About</p>
