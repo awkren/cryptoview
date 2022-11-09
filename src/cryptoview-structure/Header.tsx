@@ -1,27 +1,35 @@
 import { isAbsolute } from 'path'
-import React from 'react'
+import React, {useState} from 'react'
 import topWave from '../assets/img/wave.svg'
+import {FaBars, FaTimes} from 'react-icons/fa';
+import './Header.css'
+
+// const Header = () => {
+
+  // import React, { useState } from 'react';
 
 const Header = () => {
+  // set a variable 'responsive' to false. Update it using 'setResponsive'
+  const [responsive, setResponsive] = useState(false);
+
+  const toggleResponsive = () => {
+    //take current value of responsive and flip it
+    setResponsive(prev => !prev);
+  }
+
   return (
-    <div id='header-outer' className=''>
-      {/* <img src={topWave} alt='svg-top'/> */}
-    <div id='main-header' className="w-[80%] mt-[.5rem] m-auto flex flex-row justify-around">
-      
-      <div id='left-header' className='flex flex-row items-center gap-[5rem] text-[1.5rem]'>
-        <p>About</p>
-        <p>Contact</p>
+    <nav>
+      <div className={responsive ? 'topnav responsive' : 'topnav'}>
+        <a href='#home'>Home</a>
+        <a href="">Basdasdasd</a>
+        <a href="">Afdadsd</a>
+        <a href="">Aboyte</a>
+        <a className='icon' onClick={toggleResponsive}>
+          <p><FaBars/></p>
+        </a>
       </div>
-      <div id='mid-header' className='text-[2rem] font-bold'>
-        <p>CryptoView</p>
-      </div>
-      <div id='right-header' className='flex flex-row items-center gap-[5rem] text-[1.5rem]'>
-        <p>Login</p>
-        <p>Sign Up</p>
-      </div>
-    </div>
-    </div>
-  )
+    </nav>
+  );
 }
 
 export default Header
