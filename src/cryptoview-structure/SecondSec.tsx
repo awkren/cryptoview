@@ -41,10 +41,10 @@ const SecondSec = () => {
         </div>
       </div>
 
-      <div className='mt-[4rem] w-[100%] grid grid-cols-2'>
+      <div id='second-sec-div' className='mt-[4rem] w-[100%] grid grid-cols-2'>
         <div className='text-center text-[3.5rem]'>
-          <p className='font-semibold w-[90%] m-auto leading-[3.5rem]'>We make your life easier by simplifiyng data</p>
-          <p className='w-[60%] m-auto mt-[4rem] text-[1.3rem]'>CryptoView makes it much easier and safer for you to explore and interact with blockchain apps through your favorite web browser.</p>
+          <p id='life-easier' className='font-semibold w-[90%] m-auto leading-[3.5rem]'>We make your life easier by simplifiyng data!</p>
+          <p id='life-easier-desc' className='w-[60%] m-auto mt-[4rem] text-[1.3rem]'>CryptoView makes it much easier and safer for you to explore and interact with blockchain apps through your favorite web browser.</p>
           <div className='text-[1.3rem] flex flex-row justify-center gap-[4rem] mt-[4rem]'>
             <p className='flex flex-row items-center'><FaCheck className='text-[#3629b0]'/><span className='ml-[.4rem]'>Simple</span></p>
             <p className='flex flex-row items-center'><FaCheck className='mr-[.4rem] text-[#3629b0]'/>Reliable</p>
@@ -53,8 +53,8 @@ const SecondSec = () => {
           <div className='border border-b-5 mt-[2rem] w-[60%] m-auto'></div>
           <p className='text-[1.3rem] font-semibold mt-[1.5rem] text-[#3629b0]'>Read our documentation</p>
         </div>
-        <div className='m-auto'>
-          <img src={crypto} className='w-[500px]' alt='/'/>
+        <div id='img-second-div' className='m-auto'>
+          <img id='img-2nd' src={crypto} className='w-[500px]' alt='/'/>
         </div>
       </div>
 

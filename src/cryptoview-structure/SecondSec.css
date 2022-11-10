@@ -8,6 +8,23 @@
   #supported-companies p{
     font-size: 2.5rem;
   }
+  #second-sec-div{
+    grid-template-columns: 1fr;
+  }
+  #img-second-div{
+    margin-top:2rem
+  }
+  #life-easier{
+    width: 100%;
+  }
+  #life-easier-desc{
+    width: 90%;
+    text-align: center;
+  }
+  #img-2nd{
+    max-width: 500px;
+    width: 100%;
+  }
 }
 
 @media screen and (max-width:600px){
