@@ -1,0 +1,14 @@
+@media screen and (max-width:940px){
+  #how-grid{
+    width: 95%;
+  }
+  #icon-how{
+    display: none;
+  }
+  #how-top{
+    line-height: 1.7rem;
+  }
+  #how-top p{
+    font-size: 1.3rem;
+  }
+}
