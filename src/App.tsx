@@ -3,6 +3,7 @@ import './App.css';
 import FirstSec from './cryptoview-structure/FirstSec';
 import Header from './cryptoview-structure/Header';
 import SecondSec from './cryptoview-structure/SecondSec';
+import ThirdSec from './cryptoview-structure/ThirdSec';
 
 function App() {
   return (
@@ -10,6 +11,7 @@ function App() {
       <Header/>
       <FirstSec/>
       <SecondSec/>
+      <ThirdSec/>
     </div>
   );
 }
