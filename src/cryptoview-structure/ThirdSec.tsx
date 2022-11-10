@@ -13,6 +13,7 @@ const ThirdSec = () => {
       </div>
       <div id='third-right-side' className='m-auto'>
         <img id='third-img' src={cryptotwo} className='w-[500px]' alt='.'/>
+        <a id='book-call' className='hidden' href='/'>Book a call</a>
       </div>
     </div>
   )
