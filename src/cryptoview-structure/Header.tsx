@@ -25,7 +25,8 @@ const Header = () => {
         <a href="">Afdadsd</a>
         <a href="">Aboyte</a>
         <a className='icon' onClick={toggleResponsive}>
-          <p><FaBars/></p>
+          {/* <p><FaBars/></p> */}
+          {responsive ? (<FaTimes size={20} style={{color: '#333'}}/>) : (<FaBars size={20} style={{color: '#333'}}/>)}
         </a>
       </div>
     </nav>
