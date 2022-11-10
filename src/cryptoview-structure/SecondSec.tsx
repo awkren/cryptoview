@@ -1,6 +1,7 @@
 import React from 'react'
-import { FaHotjar, FaNapster, FaRust, FaJira, FaEvernote, FaCheck } from "react-icons/fa";
+import { FaHotjar, FaNapster, FaRust, FaJira, FaEvernote, FaCheck, FaEarlybirds } from "react-icons/fa";
 import crypto from '../assets/img/crypto.png'
+import './SecondSec.css'
 
 const SecondSec = () => {
   return (
@@ -33,6 +34,9 @@ const SecondSec = () => {
           <div id='evernote'>
             <p className='text-[4rem]'><FaEvernote/></p>
             {/* <p>Evernote</p> */}
+          </div>
+          <div id='early-birds'>
+          <p className='text-[4rem]'><FaEarlybirds/></p>
           </div>
         </div>
       </div>

@@ -1,0 +1,19 @@
+@media screen and (max-width:940px){
+  #supported-companies{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-column-gap: 4rem;
+    grid-row-gap: 3rem;
+  }
+  #supported-companies p{
+    font-size: 2.5rem;
+  }
+}
+
+@media screen and (max-width:600px){
+  #supported-companies{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-column-gap: 5rem;
+  }
+}
