@@ -4,9 +4,8 @@ import './FirstSec.css'
 const FirstSec = () => {
   return (
     <div id='main-first-sec' className='w-[80%] flex flex-col justify-center items-center m-auto'>
-      <div id='title-first-sec' className='mt-[10rem] text-[4rem] font-semibold leading-[4.5rem]'>
-        <p className='title-center'>It's not a simple crypto hub,</p>
-        <p className='text-center'>we care about accuracy.</p>
+      <div id='title-first-sec' className='mt-[10rem] text-[5rem] font-bold leading-[4.5rem]'>
+        <p className='text-center'>It's all about accuracy.</p>
       </div>
       <div id='sub-title-first-sec' className='mt-[3rem]' >
         <p className='text-[2rem]'>All coins, 99% of uptime, 24/7,</p>
