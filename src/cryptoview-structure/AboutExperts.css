@@ -1,6 +1,14 @@
 @media screen and (max-width:940px){
   #main-about-experts{
     grid-template-columns: 1fr;
+    width: 80%;
+    justify-content: center;
+  }
+  #about-experts-left{
+    margin: auto;
+  }
+  #about-experts-left img{
+    
   }
   #title-experts{
     font-size: 3rem;
