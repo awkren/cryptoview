@@ -1,5 +1,6 @@
 import React from 'react';
 import './App.css';
+import AboutExperts from './cryptoview-structure/AboutExperts';
 import FirstSec from './cryptoview-structure/FirstSec';
 import Header from './cryptoview-structure/Header';
 import HowItWorks from './cryptoview-structure/HowItWorks';
@@ -16,6 +17,7 @@ function App() {
       <HowItWorks/>
       <ThirdSec/>
       <Pricing/>
+      <AboutExperts/>
     </div>
   );
 }
