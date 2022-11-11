@@ -4,32 +4,39 @@ import topWave from '../assets/img/wave.svg'
 import {FaBars, FaTimes} from 'react-icons/fa';
 import './Header.css'
 
-// const Header = () => {
-
-  // import React, { useState } from 'react';
-
 const Header = () => {
-  // set a variable 'responsive' to false. Update it using 'setResponsive'
-  const [responsive, setResponsive] = useState(false);
-
-  const toggleResponsive = () => {
-    //take current value of responsive and flip it
-    setResponsive(prev => !prev);
+  const [click, setClick] = useState(false)
+  const handleClick = () => {
+    setClick(prev => !prev);
   }
 
   return (
-    <nav>
-      <div className={responsive ? 'topnav responsive' : 'topnav'}>
-        <a href='#home'>Home</a>
-        <a href="">Basdasdasd</a>
-        <a href="">Afdadsd</a>
-        <a href="">Aboyte</a>
-        <a className='icon' onClick={toggleResponsive}>
-          {/* <p><FaBars/></p> */}
-          {responsive ? (<FaTimes size={20} style={{color: '#FFFFFF'}}/>) : (<FaBars size={20} style={{color: '#FFFFFF'}}/>)}
-        </a>
-      </div>
-    </nav>
+    <div className='header'>
+        <div className='container'>
+            <h1>Crypto<span className='primary'>View</span></h1>
+            <ul className={click ? 'nav-menu active' : 'nav-menu'}>
+                <li>
+                    <a href='/'>Home</a>
+                </li>
+                <li>
+                    <a href='/'>Featured</a>
+                </li>
+                <li>
+                    <a href='/'>Earn</a>
+                </li>
+                <li>
+                    <a href='/'>Contact</a>
+                </li>
+            </ul>
+            <div className='btn-group'>
+                <button className='btn'>Connect Wallet</button>
+            </div>
+            <div className='hamburger' onClick={handleClick}>
+                {click ? (<FaTimes size={20} style={{color: '#333'}}/>) : (<FaBars size={20} style={{color: '#333'}}/>)}
+            </div>
+        </div>
+
+    </div>
   );
 }
 
