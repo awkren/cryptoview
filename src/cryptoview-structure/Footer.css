@@ -29,3 +29,49 @@
   margin-left: 1rem;
   border-radius: 5px;
 }
+#footer-icon-size{
+  font-size: 1.5rem;
+}
+
+@media screen and (max-width:940px){
+  #footer-main-div{
+    grid-template-columns: 1fr;
+  }
+  #footer-title{
+    text-align:center;
+  }
+  #label-join{
+    text-align: center;
+  }
+  #mail-field{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap:.3rem
+  }
+  #sub-btn{
+    height: 3rem;
+  }
+  #div-2nd, #div-1st{
+    display: none;
+  }
+    #footer-1st-col, #footer-2nd-col{
+    display: flex;
+    flex-direction: row;
+    padding: 1.5rem;
+    margin-bottom: -1.5rem;
+    margin-top: 2rem;
+    font-size: 1.4rem;
+  }
+  #footer-1st-col{
+    text-decoration: underline;
+  }
+  #footer-2nd-col{
+    gap:3.5rem;
+    font-size: 1.7rem;
+  }
+  #cap-footer{
+    display: none;
+  }
+}
