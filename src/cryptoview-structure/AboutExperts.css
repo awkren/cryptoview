@@ -1,0 +1,9 @@
+@media screen and (max-width:940px){
+  #main-about-experts{
+    grid-template-columns: 1fr;
+  }
+  #title-experts{
+    font-size: 3rem;
+    margin-top: 1rem;
+  }
+}
