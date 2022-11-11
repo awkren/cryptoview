@@ -5,6 +5,10 @@
     grid-column-gap: 4rem;
     grid-row-gap: 3rem;
   }
+  #check-section{
+    margin: 2rem auto;
+    column-gap: 3rem;
+  }
   #supported-companies p{
     font-size: 2.5rem;
   }
@@ -12,10 +16,11 @@
     grid-template-columns: 1fr;
   }
   #img-second-div{
-    margin-top:2rem
+    margin-top:2.5rem
   }
   #life-easier{
-    width: 100%;
+    width: 90%;
+    font-size: 3rem;
   }
   #life-easier-desc{
     width: 90%;
@@ -23,14 +28,7 @@
   }
   #img-2nd{
     max-width: 500px;
-    width: 100%;
-  }
-}
-
-@media screen and (max-width:600px){
-  #supported-companies{
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    grid-column-gap: 5rem;
+    width: 90%;
+    margin: auto;
   }
 }

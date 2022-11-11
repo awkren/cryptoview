@@ -1,6 +1,10 @@
 @media screen and (max-width:940px){
   #main-first-sec{
     text-align: center;
-    width: 95%;
+  }
+  #title-first-sec{
+    font-size: 3rem;
+    font-weight: bold;
+    width: 100%;
   }
 }

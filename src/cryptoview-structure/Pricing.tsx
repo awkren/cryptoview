@@ -4,7 +4,7 @@ import './Pricing.css'
 const Pricing = () => {
   return (
     <div id='price-container' className='w-[80%] pb-[4rem] m-auto'>
-      <p className='text-center text-[2.2rem] capitalize font-semibold mt-[4rem] mb-[3rem]'>Pricing</p>
+      <p id='price-main-container' className='text-center text-[2.2rem] capitalize font-semibold mt-[4rem] mb-[3rem]'>Pricing</p>
       
       <div id="container">
 

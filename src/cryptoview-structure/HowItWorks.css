@@ -1,6 +1,7 @@
 @media screen and (max-width:940px){
   #how-grid{
-    width: 95%;
+    width: 80%;
+    text-align: justify;
   }
   #icon-how{
     display: none;
