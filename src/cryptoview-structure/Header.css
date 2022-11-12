@@ -1,79 +1,59 @@
-.header {
-  width: 100%;
-  height: 90px;
-  border-bottom: 1px solid #eee;
-  background: #fff;
-  position: sticky;
+nav {
+  /* position: fixed; */
   top: 0;
-  left: 0;
-  z-index: 10;
+  width: 100%;
+  height: 50px;
+  background: linear-gradient(45deg, rgb(156, 14, 156), midnightblue);
 }
 
-.header .container {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
+.list{
+  list-style-type: none;
+  background: linear-gradient(45deg, rgb(156, 14, 156), midnightblue);
   height: 100%;
-  padding: 1rem;
-}
-
-.colors {
-  color: var(--primary);
-}
-
-.nav-menu {
   display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
 }
 
-.nav-menu li {
-  padding: 0 1rem;
+.items{
+  margin-right: 20px;
+  font-size: 20px;
+  text-transform: uppercase;
+  color: #f1f1f1;
+  cursor: pointer;
 }
 
-.nav-menu a {
-  font-size: 1rem;
-  font-weight: 600;
-  color: #333;
-}
-
-.hamburger {
+.btn{
   display: none;
-  cursor:pointer;
+  position: absolute;
+  right: 10px;
+  top: 7px;
+  padding: 5px;
+  color: #000;
+  font-size: 18px;
 }
 
-@media screen and (max-width:1240px){
-  .hamburger {
-      display: flex;
+@media screen and (max-width:940px){
+  .list{
+    flex-direction: column;
+    height: auto;
   }
 
-  .nav-menu {
-      position: absolute;
-      flex-direction: column;
-      justify-content: start;
-      top: 90px;
-      right: -100%;
-      width: 50%;
-      height: 100vh;
-      transition: 0.4s;
-      z-index: 2;
-      background: #fff;
-      border-left: 1px solid #eee;
+  .items:nth-child(1){
+    border-top: 1px solid rgb(255, 255, 255, 0.555);
+    margin-top: 50px;
   }
 
-  .nav-menu.active {
-      right: 0;
+  .items{
+    width: 100%;
+    border-top: 1px solid rgb(255, 255, 255, 0.555);
+    text-align: center;
+    margin-right: 0px;
+    padding: 20px 0;
   }
 
-  .nav-menu li {
-      padding: 1rem;
-      width: 100%;
-      border-bottom: 1px solid #eee;
-  }
-
-  .nav-menu a {
-      font-size: 1.2rem;
+  .btn{
+    display: block;
   }
 }
-
-
-
-
