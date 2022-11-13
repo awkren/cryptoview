@@ -7,20 +7,6 @@
   display: none;
 }
 
-#main-first-sec{
-  
-}
-
-#top-title{
- mix-blend-mode: difference;
- color: #FFF;
-}
-
-#sub-title-first-sec{
-  mix-blend-mode: difference;
-  color: #FFF;
-}
-
 @media screen and (max-width:940px){
   #main-first-sec{
     text-align: center;
