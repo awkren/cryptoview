@@ -34,12 +34,38 @@ nav {
   font-size: 18px;
 }
 
+.crypto-logo-text{
+  font-size: 1.8rem;
+  font-weight: bold;
+  text-align: center;
+  display: none;
+  color: white;
+}
+
+.crypto-logo-text-mobile{
+  font-size: 20px;
+  text-transform: uppercase;
+  font-weight: bold;
+  text-align: center;
+  color: white;
+  margin-right: 1rem;
+}
+
 @media screen and (max-width:940px){
   .list{
     flex-direction: column;
     height: auto;
   }
 
+  .crypto-logo-text{
+    display: block;
+    color: white;
+  }
+
+  .crypto-logo-text-mobile{
+    display: none;
+  }
+  
   .items:nth-child(1){
     border-top: 1px solid rgb(255, 255, 255, 0.555);
     margin-top: 50px;
