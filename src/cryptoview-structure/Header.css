@@ -101,6 +101,7 @@ nav {
   .crypto-logo-text{
     display: block;
     color: white;
+    padding-top: .4rem;
   }
 
   .crypto-logo-text-mobile{
