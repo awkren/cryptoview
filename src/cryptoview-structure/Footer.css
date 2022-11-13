@@ -1,10 +1,14 @@
+#footer-left, #footer-mid, #footer-right{
+  margin-top: 5rem;
+}
+
 #div-1st{
-  border-left: 4px solid #3629b0;
+  border-left: 4px solid white;
   height: 200px;
   width: 5%;
 }
 #div-2nd{
-  border-left: 4px solid #3629b0;
+  border-left: 4px solid white;
   height: 200px;
   width: 5%;
   display: flex;
@@ -33,12 +37,46 @@
   font-size: 1.5rem;
 }
 
+/* curved footer */
+
+.wrapper {
+  position: relative;
+}
+
+.custom-shape-divider-top-1668345511 {
+  position: absolute;
+  top: 3rem;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  overflow: hidden;
+  line-height: 0;
+  color: #3629b0;
+  background-color: #3629b0;
+  z-index: -1;
+}
+
+.custom-shape-divider-top-1668345511 svg {
+  position: relative;
+  display: block;
+  width: calc(100% + 1.3px);
+  height: 110px;
+  background-color: #3629b0;
+  color: #3629b0;
+}
+
+.custom-shape-divider-top-1668345511 .shape-fill {
+  fill: white;
+}
+
+/* curve end */
 @media screen and (max-width:940px){
   #footer-main-div{
     grid-template-columns: 1fr;
     width: 80%;
     justify-content: center;
     align-items: center;
+    margin-top: 3rem;
   }
   #footer-title{
     text-align:center;
@@ -77,4 +115,8 @@
   #cap-footer{
     display: none;
   }
+  #footer-left, #footer-mid{
+    margin-bottom:-5rem;
+  }
+  
 }
