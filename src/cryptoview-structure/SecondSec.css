@@ -1,3 +1,11 @@
+#second-sec-div-two{
+  width: 100%;
+  padding: 2rem 0;
+  background-color: #ccc;
+  background-image: url('../assets/img/nnnoise.svg');
+  clip-path: polygon(0 0, 100% 10%, 100% 100%, 0 90%);
+}
+
 #diagonal-box{
   margin-top: 4rem;
   font-size: 3rem;
@@ -14,6 +22,10 @@
 }
 
 @media screen and (max-width:940px){
+  #second-sec-div-two{
+    grid-template-columns: 1fr;
+    padding: 6rem 0;
+  }
   #supported-companies{
     display: grid;
     grid-template-columns: repeat(3, 1fr);
@@ -42,6 +54,7 @@
     text-align: center;
   }
   #img-2nd{
+    position: static;
     max-width: 500px;
     width: 90%;
     margin: auto;

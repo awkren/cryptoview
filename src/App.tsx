@@ -7,6 +7,7 @@ import Header from './cryptoview-structure/Header';
 import HowItWorks from './cryptoview-structure/HowItWorks';
 import Pricing from './cryptoview-structure/Pricing';
 import SecondSec from './cryptoview-structure/SecondSec';
+import Sponsors from './cryptoview-structure/Sponsors';
 import ThirdSec from './cryptoview-structure/ThirdSec';
 
 function App() {
@@ -14,6 +15,7 @@ function App() {
     <div className="App">
       <Header/>
       <FirstSec/>
+      <Sponsors/>
       <SecondSec/>
       <HowItWorks/>
       <ThirdSec/>

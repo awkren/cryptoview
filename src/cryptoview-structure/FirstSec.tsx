@@ -21,7 +21,7 @@ const FirstSec = () => {
       </div>
       <div id='below-button' className='mt-[2rem] text-center leading-[1.5rem] italic'>
         <p>CryptoView 2.0 is on it's way</p>
-        <p>Get a message when it's ready</p>
+        <p>Get a <b>message</b> when it's ready</p>
       </div>
 
     </div>

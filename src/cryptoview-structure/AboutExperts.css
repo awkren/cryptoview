@@ -1,14 +1,27 @@
+#main-about-experts{
+  width: 100%;
+  padding: 3rem 0;
+  background-color: #ccc;
+  background-image: url('../assets/img/nnnoise.svg');
+  clip-path: polygon(0% 10%, 100% 0%, 100% 90%, 0% 100%);
+/*clip-path: polygon(0 0, 100% 10%, 100% 100%, 0 90%); */
+}
+
+#about-experts-right{
+  margin-left: -10rem;
+}
+
 @media screen and (max-width:940px){
   #main-about-experts{
     grid-template-columns: 1fr;
-    width: 80%;
     justify-content: center;
+    padding: 8rem 0;
   }
   #about-experts-left{
     margin: auto;
   }
-  #about-experts-left img{
-    
+  #about-experts-right{
+    margin-left: 0;
   }
   #title-experts{
     font-size: 3rem;

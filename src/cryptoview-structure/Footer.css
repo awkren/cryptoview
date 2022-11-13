@@ -50,6 +50,8 @@
 
 .wrapper {
   position: relative;
+  background-image: url('../assets/img/nnnoise.svg');
+  z-index: -1;
 }
 
 .custom-shape-divider-top-1668345511 {
@@ -75,7 +77,8 @@
 }
 
 .custom-shape-divider-top-1668345511 .shape-fill {
-  fill: white;
+  fill: #f8f5f8;
+  /* background-image: url('../assets/img/nnnoise.svg'); */
 }
 
 /* curve end */
