@@ -80,6 +80,9 @@
 
 /* curve end */
 @media screen and (max-width:940px){
+  .custom-shape-divider-top-1668345511 svg{
+    height: 40px;
+  }
   #footer-main-div{
     grid-template-columns: 1fr;
     width: 80%;
