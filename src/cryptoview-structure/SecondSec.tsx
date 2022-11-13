@@ -40,6 +40,8 @@ const SecondSec = () => {
           </div>
         </div>
       </div>
+      
+
 
       <div id='second-sec-div' className='mt-[4rem] grid grid-cols-2'>
         <div className='text-center text-[3.5rem]'>

@@ -1,3 +1,18 @@
+#diagonal-box{
+  margin-top: 4rem;
+  font-size: 3rem;
+  background-image: linear-gradient(45deg, #6303b1, #ff0099);
+  transform: skewY(-11deg);
+}
+
+#content{
+  max-width: 50em;
+  margin: 0 auto;
+  transform: skewY(11deg);
+  width: 100vw;
+  position: absolute;
+}
+
 @media screen and (max-width:940px){
   #supported-companies{
     display: grid;

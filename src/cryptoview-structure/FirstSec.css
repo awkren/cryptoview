@@ -2,19 +2,23 @@
   position: absolute;
   width: 8em;
   z-index: -1;
-  left: 4.5em;
-  top: 1.1em;
+  left: 4.75em;
+  top: .8em;
+  display: none;
 }
 
+#main-first-sec{
+  
+}
 
 #top-title{
-  mix-blend-mode: difference;
-  color: white;
+ mix-blend-mode: difference;
+ color: #FFF;
 }
 
 #sub-title-first-sec{
   mix-blend-mode: difference;
-  color: white;
+  color: #FFF;
 }
 
 @media screen and (max-width:940px){
