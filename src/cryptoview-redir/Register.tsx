@@ -22,10 +22,11 @@ const Register = () => {
 
   return (
     <section className='wrapper-register'>
-      <nav>
+      <nav className='nav-register'>
         <p className='crypto-logo-text-register'>CryptoView</p>
         {(toggleRegisterMenu || registerScreenWidth > 940) && (
           <ul className='list-register'>
+            <li className='items-register'>Home</li>
             <li className='items-register'>Earn</li>
             <li className='items-register'>Courses</li>
             <li className='crypto-logo-text-mobile-register'>CryptoView</li>
