@@ -1,7 +1,7 @@
 import React, {useState, useEffect} from 'react'
 import {FaTimes, FaBars} from 'react-icons/fa';
 import '../cryptoview-styles/Header.css'
-
+import { Navigate } from 'react-router-dom';
 
 const Header = () => {
   
@@ -23,6 +23,12 @@ const Header = () => {
     }
   }, [])
 
+  const [goToRegister, setGoToRegister] = React.useState(false);
+
+  if(goToRegister){
+    return <Navigate to='/register'/>;
+  }
+
   return (
     <section className='wrapper'>
       <nav>
@@ -33,7 +39,9 @@ const Header = () => {
                   <li className='items'>Courses</li>
                   <li className='crypto-logo-text-mobile'>CryptoView</li>
                   <li className='items'>Login</li>
-                  <li className='items'>Sign Up</li>
+                  <li className='items' onClick={() => {
+                    setGoToRegister(true);
+                  }}>Sign Up</li>
               </ul>
               
           )}
