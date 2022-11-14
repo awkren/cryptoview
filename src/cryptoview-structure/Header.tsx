@@ -23,8 +23,15 @@ const Header = () => {
     }
   }, [])
 
+  
+  // login routing
+  const [goToLogin, setGoToLogin] = React.useState(false);
   const [goToRegister, setGoToRegister] = React.useState(false);
-
+  if(goToLogin){
+    return <Navigate to='/login'/>;
+  }
+  
+  // register routing
   if(goToRegister){
     return <Navigate to='/register'/>;
   }
@@ -38,7 +45,9 @@ const Header = () => {
                   <li className='items'>Earn</li>
                   <li className='items'>Courses</li>
                   <li className='crypto-logo-text-mobile'>CryptoView</li>
-                  <li className='items'>Login</li>
+                  <li className='items' onClick={() => {
+                    setGoToLogin(true);
+                  }}>Login</li>
                   <li className='items' onClick={() => {
                     setGoToRegister(true);
                   }}>Sign Up</li>
