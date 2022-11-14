@@ -10,7 +10,7 @@ const Pricing = () => {
 
 <div id="travel-card">
 <div id="title-price">
-  <p id="">Personal</p>
+  <p id="price-name">Personal</p>
 </div>
 <div id='card-body-one'>
   <p>Investment tips</p>
@@ -23,7 +23,7 @@ const Pricing = () => {
 
 <div id="travel-card">
 <div id="title-price">
-  <p id="">Premium</p>
+  <p id="price-name">Premium</p>
 </div>
 <div id='card-body-two'>
   <p>Investment tips</p>
@@ -37,7 +37,7 @@ const Pricing = () => {
 
 <div id="travel-card">
 <div id="title-price">
-  <p id="">Enterprise</p>
+  <p id="price-name">Enterprise</p>
 </div>
 <div id='card-body-three'>
   <p>Investment tips</p>

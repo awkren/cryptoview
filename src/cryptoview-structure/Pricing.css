@@ -46,20 +46,26 @@
   vertical-align: middle;
   line-height: 137px;
   font-size: 1.3rem;
+  background-color: white;
 }
 #card-body-two{
   text-align: center;
   vertical-align: middle;
   line-height: 91px;
   font-size: 1.3rem;
+  background-color: white;
 }
 #card-body-three{
   text-align: center;
   vertical-align: middle;
   line-height: 55px;
+  background-color: white;
   font-size: 1.3rem;
 }
 
+#price-name{
+  /* background-color: #ccc; */
+}
 
 @media screen and (max-width:940px){
   #container{

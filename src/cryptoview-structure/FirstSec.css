@@ -1,11 +1,3 @@
-#blob-title{
-  position: absolute;
-  width: 8em;
-  z-index: -1;
-  left: 4.75em;
-  top: .8em;
-  display: none;
-}
 
 @media screen and (max-width:940px){
   #main-first-sec{

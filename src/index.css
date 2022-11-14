@@ -5,8 +5,8 @@
 
 body {
   margin: 0;
-  /* background-color: white; */
-  background-image: url('./assets/img/nnnoise.svg');
+  background-color: white;
+  /* background-image: url('./assets/img/nnnoise.svg'); */
   color: black;
 }
 
