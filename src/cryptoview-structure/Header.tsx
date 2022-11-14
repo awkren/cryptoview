@@ -1,6 +1,6 @@
 import React, {useState, useEffect} from 'react'
 import {FaTimes, FaBars} from 'react-icons/fa';
-import './Header.css'
+import '../cryptoview-styles/Header.css'
 
 
 const Header = () => {

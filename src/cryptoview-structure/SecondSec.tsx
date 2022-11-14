@@ -1,7 +1,7 @@
 import React from 'react'
 import { FaHotjar, FaNapster, FaRust, FaJira, FaEvernote, FaCheck, FaEarlybirds } from "react-icons/fa";
 import crypto from '../assets/img/crypto.png'
-import './SecondSec.css'
+import '../cryptoview-styles/SecondSec.css'
 
 const SecondSec = () => {
   return (

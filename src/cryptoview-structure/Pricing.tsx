@@ -1,5 +1,5 @@
 import React from 'react'
-import './Pricing.css'
+import '../cryptoview-styles/Pricing.css'
 
 const Pricing = () => {
   return (

@@ -1,5 +1,5 @@
 import React from 'react'
-import './AboutExperts.css'
+import '../cryptoview-styles/AboutExperts.css'
 import cryptoThree from '../assets/img/crypto3.png'
 import { SiCnn, SiBbc, SiThewashingtonpost, SiNewyorktimes } from "react-icons/si";
 import {TiArrowForward} from 'react-icons/ti'

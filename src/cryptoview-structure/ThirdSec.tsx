@@ -1,5 +1,5 @@
 import React from 'react'
-import './ThirdSec.css'
+import '../cryptoview-styles/ThirdSec.css'
 import cryptotwo from '../assets/img/crypto2.png'
 
 const ThirdSec = () => {

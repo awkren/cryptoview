@@ -1,5 +1,5 @@
 import React from 'react'
-import './FirstSec.css'
+import '../cryptoview-styles/FirstSec.css'
 
 const FirstSec = () => {
   return (

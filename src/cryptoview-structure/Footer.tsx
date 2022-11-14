@@ -1,5 +1,5 @@
 import React from 'react'
-import './Footer.css'
+import '../cryptoview-styles/Footer.css'
 import {BsInstagram, BsTwitter, BsYoutube} from 'react-icons/bs'
 
 const Footer = () => {

@@ -1,5 +1,5 @@
 import React from 'react'
-import './HowItWorks.css'
+import '../cryptoview-styles/HowItWorks.css'
 import {FaRegHandPointRight} from 'react-icons/fa'
 import {TiArrowRightThick, TiArrowForward} from 'react-icons/ti'
 
