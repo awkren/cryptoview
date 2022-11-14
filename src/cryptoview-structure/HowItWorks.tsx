@@ -13,7 +13,7 @@ const HowItWorks = () => {
           <p className='text-[1.7rem] mt-[1rem] flex flex-row items-center'><TiArrowRightThick id='icon-how' className='mr-[5px] text-[#3629b0]'/>Plus, you are able to save your favorite coins. This way, you get access to them right in your profile.</p>
         </div>
         <div id='how-bot' className='mt-[2rem] m-auto'>
-          <p className='text-[1.3rem] font-semibold text-[#3629b0] uppercase flex flex-row items-center'><TiArrowForward className='mr-[5px]'/>Read more</p>
+          <p className='text-[1.3rem] font-semibold text-[#3629b0] uppercase flex flex-row items-center'><TiArrowForward className='mr-[5px]'/><a href='/how-it-works'>Read more</a></p>
         </div>
       </div>
     </div>

@@ -17,9 +17,9 @@ const Footer = () => {
         <div id='footer-mid' className='flex flex-row text-[1.1rem] font-semibold m-auto gap-6'>
         <div id='div-1st'></div>
         <div id='footer-1st-col' className='flex flex-col gap-8 m-auto'>
-          <p>Developers</p>
-          <p>Press</p>
-          <p>About</p>
+          <p><a href='/developers'>Developers</a></p>
+          <p><a href='/press'>Press</a></p>
+          <p><a href='/about'>About</a></p>
         </div>
         </div>
         <div id='footer-right' className='flex flex-row text-[1.1rem] font-semibold m-auto gap-6'>

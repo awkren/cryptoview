@@ -16,7 +16,7 @@ const SecondSec = () => {
           <p className='flex flex-row items-center'><FaCheck className='mr-[.4rem] text-[#3629b0]'/>Quick</p>
         </div>
         <div className='border border-b-5 mt-[2rem] w-[60%] m-auto'></div>
-        <p className='text-[1.3rem] font-semibold mt-[1.5rem] text-[#3629b0]'>Read our documentation</p>
+        <p className='text-[1.3rem] font-semibold mt-[1.5rem] text-[#3629b0]'><a href='/docs'>Read our documentation</a></p>
         </div>
         <div id='img-second-div' className='m-auto'>
           <img id='img-2nd' src={crypto} className='w-[500px]' alt='/'/>
