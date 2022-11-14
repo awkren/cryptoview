@@ -1,8 +1,16 @@
 import React from 'react'
 import '../cryptoview-styles/Footer.css'
 import {BsInstagram, BsTwitter, BsYoutube} from 'react-icons/bs'
+import { Navigate } from 'react-router-dom'
 
 const Footer = () => {
+
+  const [goToAbout, setGoToAbout] = React.useState(false);
+
+  if(goToAbout){
+    return <Navigate to='/about'/>;
+  }
+
   return (
     <section className='wrapper'>
       <div id='footer-main-div' className='w-[75%] text-[#FFFFFF] m-auto grid grid-cols-3 pt-[4rem] pb-[4rem]'>
@@ -19,7 +27,9 @@ const Footer = () => {
         <div id='footer-1st-col' className='flex flex-col gap-8 m-auto'>
           <p><a href='/developers'>Developers</a></p>
           <p><a href='/press'>Press</a></p>
-          <p><a href='/about'>About</a></p>
+          <p className='hover:cursor-pointer'><a onClick={() => {
+            setGoToAbout(true);
+          }}>About</a></p>
         </div>
         </div>
         <div id='footer-right' className='flex flex-row text-[1.1rem] font-semibold m-auto gap-6'>
