@@ -58,7 +58,18 @@ const Register = () => {
         </svg>
       </div>
     </section>
-    <div>REGISTER</div>
+    <div id='login-form' className='grid grid-cols-1 items-center justify-center w-[60%] m-auto text-center pt-[4rem]'>
+      <p className='text-[2rem] font-semibold mb-[1rem]'>Create Account</p>
+      <form className='flex flex-col gap-[.5rem]'>
+        <label className='text-[1.5rem]'>Enter your email:</label>
+        <input className='border-2 border-purple-700 w-[40%] text-[1.3rem] m-auto' type='email'/>
+        <label className='text-[1.5rem]'>Enter your password:</label>
+        <input className='border-2 border-purple-700 w-[40%] text-[1.3rem] m-auto' type='password'/>
+        <label className='text-[1.5rem]'>Repeat your password:</label>
+        <input className='border-2 border-purple-700 w-[40%] text-[1.3rem] m-auto' type='password'/>
+        <a href='#' className='text-[1.5rem] border-2 border-purple-700 rounded-full w-[20%] align-middle m-auto items-center justify-center bg-[purple] text-[white]'>Create Account</a>
+      </form>
+    </div>
   </>)
 }
 

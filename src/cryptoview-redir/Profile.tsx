@@ -51,7 +51,7 @@ const Profile = () => {
       </svg>
     </div>
   </section>
-  <div>Profile Page<p className='font-bold'>Only auth users can see this :p</p></div>
+  <div className='mt-[3rem] text-[2rem] text-center'>Profile Page<p className='font-bold'>Only auth users can see this :p</p></div>
   </>)
 }
 

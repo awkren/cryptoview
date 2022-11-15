@@ -1,7 +1,7 @@
 import React, {useState, useEffect} from 'react'
 import {FaTimes, FaBars} from 'react-icons/fa'
 import '../cryptoview-styles/Login.css'
-import { Navigate } from 'react-router-dom'
+import { Form, Navigate } from 'react-router-dom'
 
 const Login = () => {
 
@@ -57,7 +57,16 @@ const Login = () => {
         </svg>
       </div>
     </section>
-    <div>Login</div>
+    <div id='login-form' className='grid grid-cols-1 items-center justify-center w-[60%] m-auto text-center pt-[4rem]'>
+      <p className='text-[2rem] font-semibold mb-[1rem]'>Login</p>
+      <form className='flex flex-col gap-[.5rem]'>
+        <label className='text-[1.5rem]'>Enter your email:</label>
+        <input className='border-2 border-purple-700 w-[40%] text-[1.3rem] m-auto' type='email'/>
+        <label className='text-[1.5rem]'>Enter your password:</label>
+        <input className='border-2 border-purple-700 w-[40%] text-[1.3rem] m-auto' type='password'/>
+        <a href='#' className='text-[1.5rem] border-2 border-purple-700 rounded-full w-[10%] align-middle m-auto items-center justify-center bg-[purple] text-[white]'>Login</a>
+      </form>
+    </div>
   </>)
 }
 

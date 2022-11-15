@@ -1,0 +1,114 @@
+.nav-profile{
+  top:0;
+  width: 100%;
+  height: 50px;
+  margin-top: -.4rem;
+}
+
+.list-profile{
+  list-style-type: none;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+
+.items-profile{
+  margin-right: 20px;
+  font-size: 20px;
+  text-transform: uppercase;
+  color: #f1f1f1;
+  cursor: pointer;
+}
+
+.btn-profile{
+  display: none;
+  position: absolute;
+  right: 10px;
+  top: 7px;
+  padding: 5px;
+  color: #000;
+  font-size: 18px;
+}
+
+.crypto-logo-text-profile{
+  font-size: 1.8rem;
+  font-weight: bold;
+  text-align: center;
+  display: none;
+  color: white;
+}
+
+.crypto-logo-text-mobile-profile{
+  display: none;
+  font-size: 25px;
+  text-transform: uppercase;
+  font-weight: bold;
+  text-align: center;
+  color: white;
+  margin-right: 1.4rem;
+}
+
+.wrapper-profile{
+  position: relative;
+}
+
+.custom-shape-divider-bottom-1668349927-profile{
+  position: absolute;
+  bottom: -1rem;
+  top: 15px;
+  margin-top: -5rem;
+  left: 0;
+  width: 100%;
+  overflow: hidden;
+  line-height: 0;
+  transform: rotate(180deg);
+  z-index: -1;
+}
+
+.custom-shape-divider-bottom-1668349927-profile svg{
+  position: relative;
+  display: block;
+  width: calc(100% + 1.3px);
+  height: 60px;
+  background-color: #3629b0;
+}
+
+.custom-shape-divider-bottom-1668349927-profile .shape-fill-profile{
+  fill: white;
+}
+
+@media screen and (max-width:940px){
+  .list-profile{
+  flex-direction: column;
+  height: auto;
+  background-color: #3629b0;
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 68%;
+  border-radius: 14px 14px;
+  }
+  .crypto-logo-text-profile{
+    display: block;
+    color: white;
+    padding-top: .4rem;
+  }
+  .crypto-logo-text-mobile-profile{
+    display: none;
+  }
+  .items-profile:nth-child(1){
+    border-top: 1px solid rgb(255, 255, 255, 0.555);
+  }
+  .items-profile{
+    width: 100%;
+    border-top: 1px solid rgb(255, 255, 255, 0.555);
+    text-align: center;
+    margin-right: 0px;
+    padding: 20px 0;
+  }
+  .btn-profile{
+    display: block;
+  }
+}
