@@ -7,6 +7,8 @@ const Login = () => {
 
   const [toggleLoginMenu, setLoginMenu] = useState(false);
   const [loginScreenWidth, setloginScreenWidth] = useState(window.innerWidth);
+  const [goToHome, setGoToHome] = React.useState(false);
+  const [goToRegister, setGoToRegister] = React.useState(false);
   const toggleLoginNav = () => {
     setLoginMenu(!toggleLoginMenu);
   }
@@ -20,17 +22,29 @@ const Login = () => {
     }
   }, []);
 
-  return (
+  if(goToHome){
+    return <Navigate to='/'/>
+  }
+
+  if(goToRegister){
+    return <Navigate to='/register'/>;
+  }
+
+  return (<>
     <section className='wrapper-login'>
       <nav className='nav-login'>
         <p className='crypto-logo-text-login'>CryptoView</p>
         {(toggleLoginMenu || loginScreenWidth > 940) && (
           <ul className='list-login'>
-            <li className='items-login'>Home</li>
+            <li className='items-login' onClick={() =>{
+              setGoToHome(true);
+            }}>Home</li>
             <li className='items-login'>Earn</li>
             <li className='items-login'>Courses</li>
             <li className='crypto-logo-text-mobile-login'>CryptoView</li>
-            <li className='items-login'>Login</li>
+            <li className='items-login' onClick={() => {
+              setGoToRegister(true);
+            }}>Sign Up</li>
           </ul>
         )}
         <div className='btn-login' onClick={toggleLoginNav}>
@@ -43,7 +57,8 @@ const Login = () => {
         </svg>
       </div>
     </section>
-  )
+    <div>Login</div>
+  </>)
 }
 
 export default Login
