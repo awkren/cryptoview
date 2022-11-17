@@ -67,7 +67,8 @@ const Register = () => {
         <input className='border-2 border-purple-700 w-[40%] text-[1.3rem] m-auto' type='password'/>
         <label className='text-[1.5rem]'>Repeat your password:</label>
         <input className='border-2 border-purple-700 w-[40%] text-[1.3rem] m-auto' type='password'/>
-        <a href='#' className='text-[1.5rem] border-2 border-purple-700 rounded-full w-[20%] align-middle m-auto items-center justify-center bg-[purple] text-[white]'>Create Account</a>
+        <p className='text-[1.1rem] hover:underline'><a href='/'>Already have an account? Login instead.</a></p>
+        <a href='/' className='text-[1.5rem] border-2 border-purple-700 rounded-full w-[20%] align-middle m-auto items-center justify-center bg-[purple] text-[white]'>Create Account</a>
       </form>
     </div>
   </>)

@@ -64,7 +64,8 @@ const Login = () => {
         <input className='border-2 border-purple-700 w-[40%] text-[1.3rem] m-auto' type='email'/>
         <label className='text-[1.5rem]'>Enter your password:</label>
         <input className='border-2 border-purple-700 w-[40%] text-[1.3rem] m-auto' type='password'/>
-        <a href='#' className='text-[1.5rem] border-2 border-purple-700 rounded-full w-[10%] align-middle m-auto items-center justify-center bg-[purple] text-[white]'>Login</a>
+        <p className='text-[1.1rem] hover:underline w-[100%]'><a href='/'>Don't have an account? Sign up.</a></p>
+        <a href='/' className='text-[1.5rem] border-2 border-purple-700 rounded-full w-[10%] align-middle m-auto items-center justify-center bg-[purple] text-[white]'>Login</a>
       </form>
     </div>
   </>)
