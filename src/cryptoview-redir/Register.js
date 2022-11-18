@@ -3,6 +3,7 @@ import {FaTimes, FaBars} from 'react-icons/fa'
 import '../cryptoview-styles/Register.css'
 import { Navigate } from 'react-router-dom'
 import { Form, Button} from 'react-bootstrap';
+import axios from 'axios'
 
 const Register = () => {
 
@@ -40,8 +41,23 @@ const Register = () => {
   const handleSubmit = (e) => {
     //prevent form from refreshing the whole page
     e.preventDefault()
-    //popup alert showing submit text
-    alert('Submitted')
+    //axios config
+    const configuration = {
+      method: 'post',
+      url: 'https://cryptoview-server-production.up.railway.app/register',
+      // url: 'http://localhost:4000/register',
+      data: {
+        email,
+        password,
+      },
+    }
+    axios(configuration)
+      .then((result) => {
+        console.log(result);
+      })
+      .catch((error) => {
+        console.log(error);
+      })
   }
 
   return (<>
