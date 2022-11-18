@@ -56,7 +56,7 @@ const Header = () => {
           )}
           {/* <button onClick={toggleNav} className='btn'>BTN</button> */}
           <div className='btn' onClick={toggleNav}>
-                  {toggleMenu ? (<FaTimes size={20} style={{color: '#FFF'}}/>) : (<FaBars size={20} style={{color: '#FFF'}}/>)}
+            {toggleMenu ? (<FaTimes size={20} style={{color: '#FFF'}}/>) : (<FaBars size={20} style={{color: '#FFF'}}/>)}
           </div>
       </nav>
       <div className="custom-shape-divider-bottom-1668349927">

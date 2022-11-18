@@ -105,7 +105,7 @@ const Register = () => {
       </form>
     </div> */}
 
-    <div className='register-form'>
+    <div className='flex flex-col'>
       <h2>Register</h2>
       <Form onSubmit={(e) => handleSubmit(e)}>
         {/* email */}
@@ -118,8 +118,8 @@ const Register = () => {
           <Form.Label>password</Form.Label>
           <Form.Control type='password' name='password' value={password} onChange={(e) => setPassword(e.target.value)} placeholder='password'/>
         </Form.Group>
-        {/* submit button */}
-        <Button variant='primary' onClick={(e) => handleSubmit(e)} type='submit'>
+        {/*INSTEAD OF THIS COMPONENT BUTTON, SHOULD USE NORMAL BUTTON FOR STYLES NOT TO MIX WITH OOTHER BTNS*/}
+        <Button className='' variant='primary' onClick={(e) => handleSubmit(e)} type='submit'>
           Submit
         </Button>
         {/* register success msg */}
