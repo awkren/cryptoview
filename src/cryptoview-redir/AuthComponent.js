@@ -25,10 +25,20 @@ const AuthComponent = () => {
         error = new Error()
       })
   }, [])
+
+  // logout func
+  const logout = () =>{
+    //destroy cookie
+    cookies.remove("TOKEN", { path: '/'})
+    //redirect user to home
+    window.location.href= '/'
+  }
   return (
     <div>
       <h1 className='text-center'>Auth Component</h1>
       <h3 className='text-center'>{message}</h3>
+      {/* logout button */}
+      <button type='submit' onClick={() => logout()}variant='danger'>Logout</button>
     </div>
   )
 }
