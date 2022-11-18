@@ -1,8 +1,8 @@
 import React, {useState, useEffect} from 'react'
 import {FaTimes, FaBars} from 'react-icons/fa'
 import '../cryptoview-styles/Login.css'
-import { Form, Navigate } from 'react-router-dom'
-
+import { Navigate } from 'react-router-dom'
+import { Form, Button } from 'react-bootstrap'
 const Login = () => {
 
   const [toggleLoginMenu, setLoginMenu] = useState(false);
@@ -57,7 +57,8 @@ const Login = () => {
         </svg>
       </div>
     </section>
-    <div id='login-form' className='grid grid-cols-1 items-center justify-center w-[60%] m-auto text-center pt-[4rem]'>
+  {/* old form */}
+    {/* <div id='login-form' className='grid grid-cols-1 items-center justify-center w-[60%] m-auto text-center pt-[4rem]'>
       <p className='text-[2rem] font-semibold mb-[1rem]'>Login</p>
       <form className='flex flex-col gap-[.5rem]'>
         <label className='text-[1.5rem]'>Enter your email:</label>
@@ -69,6 +70,26 @@ const Login = () => {
         }}>Don't have an account? Sign up.</p>
         <a href='/' className='text-[1.5rem] border-2 border-purple-700 rounded-full w-[10%] align-middle m-auto items-center justify-center bg-[purple] text-[white]'>Login</a>
       </form>
+    </div> */}
+
+    <div className='login-form'>
+      <h2>Login</h2>
+      <Form>
+        {/* email */}
+        <Form.Group controlId='formBasicEmail'>
+          <Form.Label>Email address</Form.Label>
+          <Form.Control type='email' placeholder='Enter an email'/>
+        </Form.Group>
+        {/* password */}
+        <Form.Group controlId='formBasicPassword'>
+          <Form.Label>password</Form.Label>
+          <Form.Control type='password' placeholder='password'/>
+        </Form.Group>
+        {/* submit button */}
+        <Button variant='primary' type='submit'>
+          Submit
+        </Button>
+      </Form>
     </div>
   </>)
 }

@@ -2,6 +2,7 @@ import React, {useState, useEffect} from 'react'
 import {FaTimes, FaBars} from 'react-icons/fa'
 import '../cryptoview-styles/Register.css'
 import { Navigate } from 'react-router-dom'
+import { Form, Button} from 'react-bootstrap';
 
 const Register = () => {
 
@@ -9,6 +10,10 @@ const Register = () => {
   const [registerScreenWidth, setRegisterScreenWidth] = useState(window.innerWidth);
   const [goToHome, setGoToHome] = React.useState(false);
   const [goToLogin, setGoToLogin] = React.useState(false);
+  //initial states for email, password and register
+  const [email, setEmail] = useState('');
+  const [password, setPassword] = useState("")
+  const [register, setRegister] = useState(false)
 
   const toggleRegisterNav = () => {
     setRegisterMenu(!toggleRegisterMenu);
@@ -29,6 +34,14 @@ const Register = () => {
 
   if(goToLogin){
     return <Navigate to='/login'/>;
+  }
+
+  //testing form submit
+  const handleSubmit = (e) => {
+    //prevent form from refreshing the whole page
+    e.preventDefault()
+    //popup alert showing submit text
+    alert('Submitted')
   }
 
   return (<>
@@ -58,7 +71,9 @@ const Register = () => {
         </svg>
       </div>
     </section>
-    <div id='login-form' className='grid grid-cols-1 items-center justify-center w-[60%] m-auto text-center pt-[4rem]'>
+
+    {/* form | old form */} 
+    {/* <div id='login-form' className='grid grid-cols-1 items-center justify-center w-[60%] m-auto text-center pt-[4rem]'>
       <p className='text-[2rem] font-semibold mb-[1rem]'>Create Account</p>
       <form className='flex flex-col gap-[.5rem]'>
         <label className='text-[1.5rem]'>Enter your email:</label>
@@ -72,7 +87,28 @@ const Register = () => {
         }}>Already have an account? Login instead.</p>
         <a href='/' className='text-[1.5rem] border-2 border-purple-700 rounded-full w-[20%] align-middle m-auto items-center justify-center bg-[purple] text-[white]'>Create Account</a>
       </form>
+    </div> */}
+
+    <div className='register-form'>
+      <h2>Register</h2>
+      <Form onSubmit={(e) => handleSubmit(e)}>
+        {/* email */}
+        <Form.Group controlId='formBasicEmail'>
+          <Form.Label>Email address</Form.Label>
+          <Form.Control type='email' name="email" value={email} onChange={(e) => setEmail(e.target.value)} placeholder='Enter an email'/>
+        </Form.Group>
+        {/* password */}
+        <Form.Group controlId='formBasicPassword'>
+          <Form.Label>password</Form.Label>
+          <Form.Control type='password' name='password' value={password} onChange={(e) => setPassword(e.target.value)} placeholder='password'/>
+        </Form.Group>
+        {/* submit button */}
+        <Button variant='primary' onClick={(e) => handleSubmit(e)} type='submit'>
+          Submit
+        </Button>
+      </Form>
     </div>
+
   </>)
 }
 
