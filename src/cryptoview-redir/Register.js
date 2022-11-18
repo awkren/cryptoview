@@ -44,8 +44,8 @@ const Register = () => {
     //axios config
     const configuration = {
       method: 'post',
-      url: 'https://cryptoview-server-production.up.railway.app/register',
-      // url: 'http://localhost:4000/register',
+      // url: 'https://cryptoview-server-production.up.railway.app/register',
+      url: 'http://localhost:4000/register',
       data: {
         email,
         password,
