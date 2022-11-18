@@ -53,10 +53,10 @@ const Register = () => {
     }
     axios(configuration)
       .then((result) => {
-        console.log(result);
+        setRegister(true);
       })
       .catch((error) => {
-        console.log(error);
+        error = new Error();
       })
   }
 
@@ -122,6 +122,12 @@ const Register = () => {
         <Button variant='primary' onClick={(e) => handleSubmit(e)} type='submit'>
           Submit
         </Button>
+        {/* register success msg */}
+        {register ? (
+          <p className='text-success'>You are registed successfully</p>
+        ) : (
+          <p className='text-not-registered'>You are not registered</p>
+        )}
       </Form>
     </div>
 
