@@ -1,8 +1,7 @@
 import React, {useState, useEffect} from 'react'
 import {FaTimes, FaBars} from 'react-icons/fa'
 import '../cryptoview-styles/Register.css'
-import { Navigate } from 'react-router-dom'
-import { Form, Button} from 'react-bootstrap';
+import { Redirect } from 'react-router-dom'
 import axios from 'axios'
 
 const Register = () => {
@@ -30,11 +29,11 @@ const Register = () => {
   }, []);
 
   if(goToHome){
-    return <Navigate to='/'/>;
+    return <Redirect to='/'/>;
   }
 
   if(goToLogin){
-    return <Navigate to='/login'/>;
+    return <Redirect to='/login'/>;
   }
 
   //testing form submit
@@ -106,28 +105,28 @@ const Register = () => {
 
     <div className='flex flex-col'>
       <h2>Register</h2>
-      <Form onSubmit={(e) => handleSubmit(e)}>
+      <form onSubmit={(e) => handleSubmit(e)}>
         {/* email */}
-        <Form.Group controlId='formBasicEmail'>
-          <Form.Label>Email address</Form.Label>
-          <Form.Control type='email' name="email" value={email} onChange={(e) => setEmail(e.target.value)} placeholder='Enter an email'/>
-        </Form.Group>
+        <div id='formBasicEmail'>
+          <label>Email address</label>
+          <input type='email' name="email" value={email} onChange={(e) => setEmail(e.target.value)} placeholder='Enter an email'/>
+        </div>
         {/* password */}
-        <Form.Group controlId='formBasicPassword'>
-          <Form.Label>password</Form.Label>
-          <Form.Control type='password' name='password' value={password} onChange={(e) => setPassword(e.target.value)} placeholder='password'/>
-        </Form.Group>
+        <div id='formBasicPassword'>
+          <label>password</label>
+          <input type='password' name='password' value={password} onChange={(e) => setPassword(e.target.value)} placeholder='password'/>
+        </div>
         {/*INSTEAD OF THIS COMPONENT BUTTON, SHOULD USE NORMAL BUTTON FOR STYLES NOT TO MIX WITH OOTHER BTNS*/}
-        <Button className='' variant='primary' onClick={(e) => handleSubmit(e)} type='submit'>
+        <button className='' variant='primary' onClick={(e) => handleSubmit(e)} type='submit'>
           Submit
-        </Button>
+        </button>
         {/* register success msg */}
         {register ? (
           <p className='text-success'>You are registed successfully</p>
         ) : (
           <p className='text-danger'>You are not registered</p>
         )}
-      </Form>
+      </form>
     </div>
 
   </>)

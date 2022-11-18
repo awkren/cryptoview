@@ -1,7 +1,7 @@
 import React, {useState, useEffect} from 'react'
 import {FaTimes, FaBars} from 'react-icons/fa';
 import '../cryptoview-styles/Header.css'
-import { Navigate } from 'react-router-dom';
+import { Redirect } from 'react-router-dom';
 
 const Header = () => {
   
@@ -28,12 +28,12 @@ const Header = () => {
   const [goToLogin, setGoToLogin] = React.useState(false);
   const [goToRegister, setGoToRegister] = React.useState(false);
   if(goToLogin){
-    return <Navigate to='/login'/>;
+    return <Redirect to='/login'/>;
   }
   
   // register routing
   if(goToRegister){
-    return <Navigate to='/register'/>;
+    return <Redirect to='/register'/>;
   }
 
   return (

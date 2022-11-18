@@ -1,14 +1,14 @@
 import React from 'react'
 import '../cryptoview-styles/Footer.css'
 import {BsInstagram, BsTwitter, BsYoutube} from 'react-icons/bs'
-import { Navigate } from 'react-router-dom'
+import { Redirect } from 'react-router-dom'
 
 const Footer = () => {
 
   const [goToAbout, setGoToAbout] = React.useState(false);
 
   if(goToAbout){
-    return <Navigate to='/about'/>;
+    return <Redirect to='/about'/>;
   }
 
   return (

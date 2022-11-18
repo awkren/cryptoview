@@ -1,8 +1,7 @@
 import React, {useState, useEffect} from 'react'
 import {FaTimes, FaBars} from 'react-icons/fa'
 import '../cryptoview-styles/Login.css'
-import { Navigate } from 'react-router-dom'
-import { Form, Button } from 'react-bootstrap'
+import { Redirect } from 'react-router-dom'
 import axios from 'axios'
 import Cookies from 'universal-cookie'
 
@@ -32,11 +31,11 @@ const Login = () => {
   }, []);
 
   if(goToHome){
-    return <Navigate to='/'/>
+    return <Redirect to='/'/>
   }
 
   if(goToRegister){
-    return <Navigate to='/register'/>;
+    return <Redirect to='/register'/>;
   }
 
   const handleSubmit = (e) => {
@@ -108,28 +107,28 @@ const Login = () => {
 
     <div className='login-form'>
       <h2>Login</h2>
-      <Form onSubmit={(e) => handleSubmit(e)}>
+      <form onSubmit={(e) => handleSubmit(e)}>
         {/* email */}
-        <Form.Group controlId='formBasicEmail'>
-          <Form.Label>Email address</Form.Label>
-          <Form.Control type='email' name="email" value={email} onChange={(e) => setEmail(e.target.value)} placeholder='Enter an email'/>
-        </Form.Group>
+        <div id='formBasicEmail'>
+          <label>Email address</label>
+          <input type='email' name="email" value={email} onChange={(e) => setEmail(e.target.value)} placeholder='Enter an email'/>
+        </div>
         {/* password */}
-        <Form.Group controlId='formBasicPassword'>
-          <Form.Label>password</Form.Label>
-          <Form.Control type='password' name='password' value={password} onChange={(e) => setPassword(e.target.value)} placeholder='password'/>
-        </Form.Group>
+        <div id='formBasicPassword'>
+          <label>password</label>
+          <input type='password' name='password' value={password} onChange={(e) => setPassword(e.target.value)} placeholder='password'/>
+        </div>
         {/* submit button */}
-        <Button variant='primary' type='submit' onClick={(e) => handleSubmit(e)}>
+        <button variant='primary' type='submit' onClick={(e) => handleSubmit(e)}>
           Submit
-        </Button>
+        </button>
         {/* login success msg */}
         {login ? (
           <p className='text-success'>You are logged in successfully</p>
         ) : (
           <p className='text-danger'>You are not logged in</p>
         )}
-      </Form>
+      </form>
     </div>
   </>)
 }

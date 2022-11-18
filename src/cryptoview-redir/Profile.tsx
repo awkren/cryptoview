@@ -1,6 +1,6 @@
 import React, {useEffect, useState} from 'react'
 import '../cryptoview-styles/Profile.css'
-import { Navigate } from 'react-router-dom'
+import { Redirect } from 'react-router-dom'
 import {FaBars, FaTimes} from 'react-icons/fa'
 
 const Profile = () => {
@@ -23,7 +23,7 @@ const Profile = () => {
   }, []);
 
   if(goToHome){
-    return <Navigate to='/'/>;
+    return <Redirect to='/'/>;
   }
 
   return (<>
