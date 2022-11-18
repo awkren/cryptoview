@@ -3,12 +3,21 @@ import {FaTimes, FaBars} from 'react-icons/fa'
 import '../cryptoview-styles/Login.css'
 import { Navigate } from 'react-router-dom'
 import { Form, Button } from 'react-bootstrap'
+import axios from 'axios'
+import Cookies from 'universal-cookie'
+
 const Login = () => {
 
   const [toggleLoginMenu, setLoginMenu] = useState(false);
   const [loginScreenWidth, setloginScreenWidth] = useState(window.innerWidth);
   const [goToHome, setGoToHome] = React.useState(false);
   const [goToRegister, setGoToRegister] = React.useState(false);
+  const [email, setEmail] = useState("")
+  const [password, setPassword] = useState("")
+  const [login, setLogin] = useState(false);
+
+  const cookies = new Cookies();
+
   const toggleLoginNav = () => {
     setLoginMenu(!toggleLoginMenu);
   }
@@ -28,6 +37,31 @@ const Login = () => {
 
   if(goToRegister){
     return <Navigate to='/register'/>;
+  }
+
+  const handleSubmit = (e) => {
+   // prevent form from refreshing the whole page 
+    e.preventDefault()
+    const configuration = {
+      method: "post",
+      url: "https://cryptoview-server-production.up.railway.app/login",//change it to the deploy version
+      data: {
+        email,
+        password,
+      },
+    }
+    //api call
+    axios(configuration)
+      .then((result) => {
+        setLogin(true)
+        cookies.set("TOKEN", result.data.token, {
+          path: '/',
+        })
+        window.location.href = '/auth'
+      })
+      .catch((error) => {
+        error = new Error()
+      })
   }
 
   return (<>
@@ -74,21 +108,27 @@ const Login = () => {
 
     <div className='login-form'>
       <h2>Login</h2>
-      <Form>
+      <Form onSubmit={(e) => handleSubmit(e)}>
         {/* email */}
         <Form.Group controlId='formBasicEmail'>
           <Form.Label>Email address</Form.Label>
-          <Form.Control type='email' placeholder='Enter an email'/>
+          <Form.Control type='email' name="email" value={email} onChange={(e) => setEmail(e.target.value)} placeholder='Enter an email'/>
         </Form.Group>
         {/* password */}
         <Form.Group controlId='formBasicPassword'>
           <Form.Label>password</Form.Label>
-          <Form.Control type='password' placeholder='password'/>
+          <Form.Control type='password' name='password' value={password} onChange={(e) => setPassword(e.target.value)} placeholder='password'/>
         </Form.Group>
         {/* submit button */}
-        <Button variant='primary' type='submit'>
+        <Button variant='primary' type='submit' onClick={(e) => handleSubmit(e)}>
           Submit
         </Button>
+        {/* login success msg */}
+        {login ? (
+          <p className='text-success'>You are logged in successfully</p>
+        ) : (
+          <p className='text-danger'>You are not logged in</p>
+        )}
       </Form>
     </div>
   </>)

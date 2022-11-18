@@ -44,8 +44,7 @@ const Register = () => {
     //axios config
     const configuration = {
       method: 'post',
-      // url: 'https://cryptoview-server-production.up.railway.app/register',
-      url: 'http://localhost:4000/register',
+      url: 'https://cryptoview-server-production.up.railway.app/register',
       data: {
         email,
         password,
@@ -126,7 +125,7 @@ const Register = () => {
         {register ? (
           <p className='text-success'>You are registed successfully</p>
         ) : (
-          <p className='text-not-registered'>You are not registered</p>
+          <p className='text-danger'>You are not registered</p>
         )}
       </Form>
     </div>
