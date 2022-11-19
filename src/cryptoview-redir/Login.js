@@ -1,12 +1,22 @@
-import React, {useState, useEffect, createContext} from 'react'
+import React, {useState, useEffect, useRef} from 'react'
 import {FaTimes, FaBars} from 'react-icons/fa'
 import '../cryptoview-styles/Login.css'
 import { Redirect } from 'react-router-dom'
 import axios from 'axios'
 import Cookies from 'universal-cookie'
+import AuthComponent from './AuthComponent'
 
-const Login = () => {
+export let email;
+export let showUser;
 
+export default function Login({setUserEmail}) {
+
+  let inputRef = useRef(null)
+
+  showUser = () => {
+    console.log(inputRef.current.value);
+  }
+  
   const [toggleLoginMenu, setLoginMenu] = useState(false);
   const [loginScreenWidth, setloginScreenWidth] = useState(window.innerWidth);
   const [goToHome, setGoToHome] = React.useState(false);
@@ -59,12 +69,13 @@ const Login = () => {
           path: '/',
         })
         window.location.href = '/auth'
+        
       })
       .catch((error) => {
         error = new Error()
       })
   }
-  
+  email = email;
   return (<>
     <section className='wrapper-login'>
       <nav className='nav-login'>
@@ -92,28 +103,14 @@ const Login = () => {
         </svg>
       </div>
     </section>
-  {/* old form */}
-    {/* <div id='login-form' className='grid grid-cols-1 items-center justify-center w-[60%] m-auto text-center pt-[4rem]'>
-      <p className='text-[2rem] font-semibold mb-[1rem]'>Login</p>
-      <form className='flex flex-col gap-[.5rem]'>
-        <label className='text-[1.5rem]'>Enter your email:</label>
-        <input className='border-2 border-purple-700 w-[40%] text-[1.3rem] m-auto' type='email'/>
-        <label className='text-[1.5rem]'>Enter your password:</label>
-        <input className='border-2 border-purple-700 w-[40%] text-[1.3rem] m-auto' type='password'/>
-        <p className='text-[1.1rem] hover:underline hover:cursor-pointer w-[100%]' onClick={() => {
-          setGoToRegister(true);
-        }}>Don't have an account? Sign up.</p>
-        <a href='/' className='text-[1.5rem] border-2 border-purple-700 rounded-full w-[10%] align-middle m-auto items-center justify-center bg-[purple] text-[white]'>Login</a>
-      </form>
-    </div> */}
-
     <div className='login-form'>
       <h2>Login</h2>
       <form onSubmit={(e) => handleSubmit(e)}>
         {/* email */}
         <div id='formBasicEmail'>
+          
           <label>Email address</label>
-          <input type='email' id='email-field' name="email" value={email} onChange={(e) => setEmail(e.target.value)} placeholder='Enter an email'/>
+          <input type='email' id='email-field' ref={inputRef} name="email" value={email} onChange={(e) => setEmail(e.target.value)} placeholder='Enter an email'/>
         </div> 
         {/* password */}
         <div id='formBasicPassword'>
@@ -134,5 +131,3 @@ const Login = () => {
     </div>
   </>)
 }
-
-export default Login

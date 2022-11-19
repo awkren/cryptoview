@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useState } from 'react'
 import { Route, BrowserRouter, Switch } from 'react-router-dom'
 import Home from './Home'
 import About from './cryptoview-redir/About'
@@ -11,6 +11,7 @@ import ProtectedRoutes from './cryptoview-redir/ProtectedRoutes.js'
 
 
 const RoutesRedir = () => {
+  const [userEmail, setUserEmail] = useState("");
   return (
     <React.StrictMode>
     <BrowserRouter>
