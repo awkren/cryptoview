@@ -29,11 +29,11 @@ const Register = () => {
   }, []);
 
   if(goToHome){
-    return <Redirect to='/'/>;
+    window.location.href='/'
   }
 
   if(goToLogin){
-    return <Redirect to='/login'/>;
+    window.location.href= '/login'
   }
 
   //testing form submit
@@ -50,12 +50,19 @@ const Register = () => {
       },
     }
     axios(configuration)
-      .then((result) => {
-        setRegister(true);
+    .then((result) => {
+      setRegister(true);
+      if(setRegister === true){
+        return <Redirect to='/auth'/>
+        }
       })
       .catch((error) => {
         error = new Error();
       })
+  }
+
+  if(register){
+    window.location.href='/login'
   }
 
   return (<>
@@ -85,47 +92,31 @@ const Register = () => {
         </svg>
       </div>
     </section>
-
-    {/* form | old form */} 
-    {/* <div id='login-form' className='grid grid-cols-1 items-center justify-center w-[60%] m-auto text-center pt-[4rem]'>
-      <p className='text-[2rem] font-semibold mb-[1rem]'>Create Account</p>
-      <form className='flex flex-col gap-[.5rem]'>
-        <label className='text-[1.5rem]'>Enter your email:</label>
-        <input className='border-2 border-purple-700 w-[40%] text-[1.3rem] m-auto' type='email'/>
-        <label className='text-[1.5rem]'>Enter your password:</label>
-        <input className='border-2 border-purple-700 w-[40%] text-[1.3rem] m-auto' type='password'/>
-        <label className='text-[1.5rem]'>Repeat your password:</label>
-        <input className='border-2 border-purple-700 w-[40%] text-[1.3rem] m-auto' type='password'/>
-        <p className='text-[1.1rem] hover:underline hover:cursor-pointer' onClick={() => {
-          setGoToLogin(true);
-        }}>Already have an account? Login instead.</p>
-        <a href='/' className='text-[1.5rem] border-2 border-purple-700 rounded-full w-[20%] align-middle m-auto items-center justify-center bg-[purple] text-[white]'>Create Account</a>
-      </form>
-    </div> */}
-
-    <div className='flex flex-col'>
-      <h2>Register</h2>
-      <form onSubmit={(e) => handleSubmit(e)}>
+    <div className='flex flex-col text-center mt-[1.5rem]'>
+      <p className='text-[2.5rem]'>Create a new account</p>
+      <form className='flex flex-col justify-center items-center' onSubmit={(e) => handleSubmit(e)}>
         {/* email */}
-        <div id='formBasicEmail'>
-          <label>Email address</label>
-          <input type='email' name="email" value={email} onChange={(e) => setEmail(e.target.value)} placeholder='Enter an email'/>
+        <div className='flex flex-col mt-[1.3rem]'>
+          <label className='text-left text-[1.3rem]'>Email address</label>
+          <input className='pl-[.5rem] text-[1.3rem] placeholder:text-center border-[1px] border-red-500 rounded-[6px] w-[30rem]' required type='email' name="email" value={email} onChange={(e) => setEmail(e.target.value)} placeholder='Enter an email'/>
         </div>
         {/* password */}
-        <div id='formBasicPassword'>
-          <label>password</label>
-          <input type='password' name='password' value={password} onChange={(e) => setPassword(e.target.value)} placeholder='password'/>
+        <div className='flex flex-col'>
+          <label className='text-left text-[1.3rem]'>password</label>
+          <input className='pl-[.5rem] text-[1.3rem] placeholder:text-center border-[1px] border-red-500 rounded-[6px] w-[30rem]' required type='password' name='password' value={password} onChange={(e) => setPassword(e.target.value)} placeholder='password'/>
         </div>
-        {/*INSTEAD OF THIS COMPONENT BUTTON, SHOULD USE NORMAL BUTTON FOR STYLES NOT TO MIX WITH OOTHER BTNS*/}
-        <button className='' variant='primary' onClick={(e) => handleSubmit(e)} type='submit'>
+        <button className='w-[6rem] h-[2.5rem] text-[1.3rem] rounded-[5px] mt-[1rem] border-[1px] border-red-500' variant='primary' onClick={(e) => handleSubmit(e)} type='submit'>
           Submit
         </button>
+        {/* go to login */}
+        <p className='text-[1.3rem] mt-[1rem]'>Already have an account? Go to login!</p>
         {/* register success msg */}
         {register ? (
-          <p className='text-success'>You are registed successfully</p>
+          <p>Accout created</p>
         ) : (
-          <p className='text-danger'>You are not registered</p>
+          <p className='mt-[1rem] text-[1.3rem]'>You are logged as a <em className='not-italic font-semibold text-[red]'>Guest</em></p>
         )}
+        
       </form>
     </div>
 

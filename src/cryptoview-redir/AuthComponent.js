@@ -1,8 +1,8 @@
-import React, {useEffect, useState} from 'react'
+import React, {useEffect, useState, createContext} from 'react'
 import axios from 'axios'
 import Cookies from 'universal-cookie'
 
-const AuthComponent = () => {
+const AuthComponent = (props) => {
   const cookies = new Cookies();
   const token = cookies.get("TOKEN")
   const [message, setMessage] = useState("")
@@ -37,6 +37,7 @@ const AuthComponent = () => {
     <div>
       <h1 className='text-center'>Auth Component</h1>
       <h3 className='text-center'>{message}</h3>
+      <p>You are logged as {props.email}</p>
       {/* logout button */}
       <button type='submit' onClick={() => logout()}variant='danger'>Logout</button>
     </div>

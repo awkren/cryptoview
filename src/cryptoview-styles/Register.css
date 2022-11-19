@@ -79,6 +79,12 @@
   fill: white;
 }
 
+/* new style */
+
+
+
+/* end of new style */
+
 @media screen and (max-width:940px){
   .list-register{
   flex-direction: column;

@@ -1,4 +1,4 @@
-import React, {useState, useEffect} from 'react'
+import React, {useState, useEffect, createContext} from 'react'
 import {FaTimes, FaBars} from 'react-icons/fa'
 import '../cryptoview-styles/Login.css'
 import { Redirect } from 'react-router-dom'
@@ -31,11 +31,13 @@ const Login = () => {
   }, []);
 
   if(goToHome){
-    return <Redirect to='/'/>
+    // return <Redirect to='/'/> *react-router-dom v5.1.2+
+    window.location.href ='/'
   }
 
   if(goToRegister){
-    return <Redirect to='/register'/>;
+    // return <Redirect to='/register'/>; *react-router-dom v5.1.2+
+    window.location.href ='/'
   }
 
   const handleSubmit = (e) => {
@@ -62,7 +64,7 @@ const Login = () => {
         error = new Error()
       })
   }
-
+  
   return (<>
     <section className='wrapper-login'>
       <nav className='nav-login'>
@@ -111,8 +113,8 @@ const Login = () => {
         {/* email */}
         <div id='formBasicEmail'>
           <label>Email address</label>
-          <input type='email' name="email" value={email} onChange={(e) => setEmail(e.target.value)} placeholder='Enter an email'/>
-        </div>
+          <input type='email' id='email-field' name="email" value={email} onChange={(e) => setEmail(e.target.value)} placeholder='Enter an email'/>
+        </div> 
         {/* password */}
         <div id='formBasicPassword'>
           <label>password</label>

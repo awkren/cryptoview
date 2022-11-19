@@ -27,13 +27,16 @@ const Header = () => {
   // login routing
   const [goToLogin, setGoToLogin] = React.useState(false);
   const [goToRegister, setGoToRegister] = React.useState(false);
+
   if(goToLogin){
-    return <Redirect to='/login'/>;
+    // return <Redirect to='/login'/>; *react-router-dom v5.1.2+
+    window.location.href = '/login'
   }
   
   // register routing
   if(goToRegister){
-    return <Redirect to='/register'/>;
+    // return <Redirect to='/register'/>; *react-router-dom v5.1.2+
+    window.location.href = '/register'
   }
 
   return (
