@@ -100,7 +100,7 @@ const Register = () => {
           <p className='sub-title-register'>Create a new account</p>
           <div className='email-main-div'>
             <label className='email-label'>Email address</label>
-            <input className='email-input' required type='email' name="email" value={email} onChange={(e) => setEmail(e.target.value)} />
+            <input className='email-input text-[1.1rem] pl-[.5rem]' required type='email' name="email" value={email} onChange={(e) => setEmail(e.target.value)} />
           </div>
           {/* password */}
           <div className='password-main-div'>
@@ -108,7 +108,7 @@ const Register = () => {
               <p className='password-name'>Password</p>
               {/* <p className='password-forgot'>Forgot your password?</p> */}
             </div>
-            <input className='password-input' required type='password' name='password' value={password} onChange={(e) => setPassword(e.target.value)} />
+            <input className='password-input text-[1.3rem] pl-[.5rem]' required type='password' name='password' value={password} onChange={(e) => setPassword(e.target.value)} />
           </div>
           {/* <div className='input-checkbox'>
             <input className='checkbox-signed-in' type='checkbox'></input>
@@ -118,11 +118,13 @@ const Register = () => {
             Create account
           </button>
           {/* go to login */}
-          <p className='already-have-account'>Already have an account? Go to login!</p>
+          <p className='already-have-account hover:cursor-pointer hover:underline' onClick={() => {
+            setGoToLogin(true);
+          }}>Already have an account? Go to login!</p>
           {/* register success msg */}
           {register ? (
             // <p>Accout created</p>
-            alert('Account created, now you can login. :)')
+            alert('Account created, taking you to the login page. :)')
           ) : (
             // <p className=''>You are logged as a <em className='not-italic font-semibold text-[red]'>Guest</em></p>
             <p></p>

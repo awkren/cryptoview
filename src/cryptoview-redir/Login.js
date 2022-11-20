@@ -103,7 +103,7 @@ export default function Login({setUserEmail}) {
           <p className='sub-title-register'>Sign in</p>
           <div className='email-main-div'>
             <label className='email-label'>Email address</label>
-            <input className='email-input' required type='email' name="email" value={email} onChange={(e) => setEmail(e.target.value)} />
+            <input className='email-input text-[1.3rem] pl-[.5rem]' required type='email' name="email" value={email} onChange={(e) => setEmail(e.target.value)} />
           </div>
           {/* password */}
           <div className='password-main-div'>
@@ -111,7 +111,7 @@ export default function Login({setUserEmail}) {
               <p className='password-name'>Password</p>
               <p className='password-forgot'>Forgot your password?</p>
             </div>
-            <input className='password-input' required type='password' name='password' value={password} onChange={(e) => setPassword(e.target.value)} />
+            <input className='password-input text-[1.3rem] pl-[.5rem]' required type='password' name='password' value={password} onChange={(e) => setPassword(e.target.value)} />
           </div>
           <div className='input-checkbox'>
             <input className='checkbox-signed-in' type='checkbox'></input>
@@ -121,7 +121,9 @@ export default function Login({setUserEmail}) {
             Continue
           </button>
           {/* go to login */}
-          <p className='already-have-account'>Don't have an account? Create one!</p>
+          <p className='already-have-account hover:cursor-pointer hover:underline' onClick={() => {
+            setGoToRegister(true)
+          }}>Don't have an account? Create one!</p>
           {/* register success msg */}
           {login ? (
             // <p>Login successful</p>
