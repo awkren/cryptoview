@@ -106,22 +106,23 @@ const Register = () => {
           <div className='password-main-div'>
             <div className='password-label'>
               <p className='password-name'>Password</p>
-              <p className='password-forgot'>Forgot your password?</p>
+              {/* <p className='password-forgot'>Forgot your password?</p> */}
             </div>
             <input className='password-input' required type='password' name='password' value={password} onChange={(e) => setPassword(e.target.value)} />
           </div>
-          <div className='input-checkbox'>
+          {/* <div className='input-checkbox'>
             <input className='checkbox-signed-in' type='checkbox'></input>
             <p className='text-signed-in'>Stay signed in</p>
-          </div>
+          </div> */}
           <button className='create-acc-button' variant='primary' onClick={(e) => handleSubmit(e)} type='submit'>
-            Continue
+            Create account
           </button>
           {/* go to login */}
           <p className='already-have-account'>Already have an account? Go to login!</p>
           {/* register success msg */}
           {register ? (
-            <p>Accout created</p>
+            // <p>Accout created</p>
+            alert('Account created, now you can login. :)')
           ) : (
             // <p className=''>You are logged as a <em className='not-italic font-semibold text-[red]'>Guest</em></p>
             <p></p>

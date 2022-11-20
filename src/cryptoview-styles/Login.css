@@ -81,6 +81,104 @@
   fill: white;
 }
 
+/* login form style */
+
+.title-register{
+  text-align: center;
+  margin-top: 3rem;
+  font-size: 2rem;
+  font-weight: bold;
+  color: #3629b0;
+  margin-bottom: 2rem;
+}
+
+/* *{border:1px solid red} */
+
+.outer-register-form{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-size: 1rem;
+  /* border: 1px solid #d3d3d3; */
+  box-shadow: rgb(0 0 0 / 12%) 0px 8px 24px;
+  border-radius: 24px;
+  width: 25%;
+  margin: auto;
+  padding: 2rem;
+}
+
+.sub-title-register{
+  font-size: 1.4rem;
+  margin-bottom: 1rem;
+}
+
+.email-main-div{
+  display: flex;
+  flex-direction: column;
+}
+
+.password-label{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.password-forgot{
+  color: #3629b0;
+}
+
+.email-label, .password-label{
+  font-weight: 500;
+  margin-bottom: .2rem;
+}
+
+.password-label{
+  margin-top:1.5rem
+}
+
+.email-input, .password-input{
+  border: 1px solid rgb(194, 194, 194);
+  width: 25rem;
+  height: 3rem;
+  border-radius: 6px 6px;
+}
+
+.input-checkbox{
+  display: flex;
+  flex-direction: row; 
+  margin-top: 1rem;
+}
+
+.checkbox-signed-in{
+  vertical-align: middle;
+  
+}
+
+.text-signed-in{
+  margin-left: .5rem;
+  font-weight: 500;
+}
+
+.create-acc-button {
+  background-color: #3629b0;
+  color: white;
+  width: 100%;
+  border-radius: 6px 6px;
+  height: 3rem;
+  margin-top: 1rem;
+  font-weight: 500;
+}
+
+.already-have-account{
+  color: #3629b0;
+  margin-top: 1rem;
+  text-align: center;
+  font-weight: 500;
+}
+
+/* end login style */
+
 @media screen and (max-width:940px){
   .list-login{
   flex-direction: column;

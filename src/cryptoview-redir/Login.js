@@ -39,7 +39,7 @@ export default function Login({setUserEmail}) {
 
   if(goToRegister){
     // return <Redirect to='/register'/>; *react-router-dom v5.1.2+
-    window.location.href ='/'
+    window.location.href ='/register'
   }
 
   const handleSubmit = (e) => {
@@ -95,31 +95,43 @@ export default function Login({setUserEmail}) {
         </svg>
       </div>
     </section>
-    <div className='login-form'>
-      <h2>Login</h2>
-      <form onSubmit={(e) => handleSubmit(e)}>
-        {/* email */}
-        <div id='formBasicEmail'>
-          
-          <label>Email address</label>
-          <input type='email' id='email-field'  name="email" value={email} onChange={(e) => setEmail(e.target.value)} placeholder='Enter an email'/>
-        </div> 
-        {/* password */}
-        <div id='formBasicPassword'>
-          <label>password</label>
-          <input type='password' name='password' value={password} onChange={(e) => setPassword(e.target.value)} placeholder='password'/>
-        </div>
-        {/* submit button */}
-        <button variant='primary' type='submit' onClick={(e) => handleSubmit(e)}>
-          Submit
-        </button>
-        {/* login success msg */}
-        {login ? (
-          <p className='text-success'>You are logged in successfully</p>
-        ) : (
-          <p className='text-danger'>You are not logged in</p>
-        )}
-      </form>
+    <div className=''>
+      <p className='title-register'>CryptoView</p>
+      <div className='outer-register-form'>
+        <form className='' onSubmit={(e) => handleSubmit(e)}>
+          {/* email */}
+          <p className='sub-title-register'>Sign in</p>
+          <div className='email-main-div'>
+            <label className='email-label'>Email address</label>
+            <input className='email-input' required type='email' name="email" value={email} onChange={(e) => setEmail(e.target.value)} />
+          </div>
+          {/* password */}
+          <div className='password-main-div'>
+            <div className='password-label'>
+              <p className='password-name'>Password</p>
+              <p className='password-forgot'>Forgot your password?</p>
+            </div>
+            <input className='password-input' required type='password' name='password' value={password} onChange={(e) => setPassword(e.target.value)} />
+          </div>
+          <div className='input-checkbox'>
+            <input className='checkbox-signed-in' type='checkbox'></input>
+            <p className='text-signed-in'>Stay signed in</p>
+          </div>
+          <button className='create-acc-button' variant='primary' onClick={(e) => handleSubmit(e)} type='submit'>
+            Continue
+          </button>
+          {/* go to login */}
+          <p className='already-have-account'>Don't have an account? Create one!</p>
+          {/* register success msg */}
+          {login ? (
+            // <p>Login successful</p>
+            alert("Login successful")
+          ) : (
+            // <p className=''>You are logged as a <em className='not-italic font-semibold text-[red]'>Guest</em></p>
+            <p></p>
+          )}
+        </form>
+      </div>
     </div>
   </>)
 }
