@@ -11,12 +11,6 @@ export let showUser;
 
 export default function Login({setUserEmail}) {
 
-  let inputRef = useRef(null)
-
-  showUser = () => {
-    console.log(inputRef.current.value);
-  }
-  
   const [toggleLoginMenu, setLoginMenu] = useState(false);
   const [loginScreenWidth, setloginScreenWidth] = useState(window.innerWidth);
   const [goToHome, setGoToHome] = React.useState(false);

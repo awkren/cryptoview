@@ -79,11 +79,71 @@
   fill: white;
 }
 
-/* new style */
+/* form style */
 
+.title-register{
+  text-align: center;
+  margin-top: 3rem;
+  font-size: 2rem;
+  font-weight: bold;
+  color: #3629b0;
+  margin-bottom: 2rem;
+}
 
+*{border:1px solid red}
 
-/* end of new style */
+.sub-title-register{
+  display: flex;
+  float: left;
+}
+
+.outer-register-form{
+  border: 1px solid black;
+  width: 30%;
+  height: 30rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: auto;
+}
+
+.email-main-div, .password-main-div{
+  display: flex;
+  flex-direction: column;
+  margin-top: 2rem;
+}
+
+.email-label, .password-label{
+  font-weight: 600;
+  margin-bottom: .2rem;
+}
+
+.email-input, .password-input{
+  border:1px solid rgb(190, 190, 190);
+  width: 30rem;
+  border-radius: 6px 6px;
+  height: 3rem;
+}
+
+.create-acc-button{
+  background-color: #3629b0;
+  color: white;
+  width: 100%;
+  height: 3rem;
+  margin-top: 2rem;
+  border-radius: 6px 6px;
+  font-weight: 600;
+}
+
+.already-have-account{
+  text-align: center;
+  margin-top: 1.5rem;
+  font-weight: 600;
+  color: #3629b0
+}
+
+/* end of form style */
 
 @media screen and (max-width:940px){
   .list-register{

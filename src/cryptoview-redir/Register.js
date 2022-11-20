@@ -92,32 +92,35 @@ const Register = () => {
         </svg>
       </div>
     </section>
-    <div className='flex flex-col text-center mt-[1.5rem]'>
-      <p className='text-[2.5rem]'>Create a new account</p>
-      <form className='flex flex-col justify-center items-center' onSubmit={(e) => handleSubmit(e)}>
-        {/* email */}
-        <div className='flex flex-col mt-[1.3rem]'>
-          <label className='text-left text-[1.3rem]'>Email address</label>
-          <input className='pl-[.5rem] text-[1.3rem] placeholder:text-center border-[1px] border-red-500 rounded-[6px] w-[30rem]' required type='email' name="email" value={email} onChange={(e) => setEmail(e.target.value)} placeholder='Enter an email'/>
-        </div>
-        {/* password */}
-        <div className='flex flex-col'>
-          <label className='text-left text-[1.3rem]'>password</label>
-          <input className='pl-[.5rem] text-[1.3rem] placeholder:text-center border-[1px] border-red-500 rounded-[6px] w-[30rem]' required type='password' name='password' value={password} onChange={(e) => setPassword(e.target.value)} placeholder='password'/>
-        </div>
-        <button className='w-[6rem] h-[2.5rem] text-[1.3rem] rounded-[5px] mt-[1rem] border-[1px] border-red-500' variant='primary' onClick={(e) => handleSubmit(e)} type='submit'>
-          Submit
-        </button>
-        {/* go to login */}
-        <p className='text-[1.3rem] mt-[1rem]'>Already have an account? Go to login!</p>
-        {/* register success msg */}
-        {register ? (
-          <p>Accout created</p>
-        ) : (
-          <p className='mt-[1rem] text-[1.3rem]'>You are logged as a <em className='not-italic font-semibold text-[red]'>Guest</em></p>
-        )}
-        
-      </form>
+    <div className=''>
+      <p className='title-register'>CryptoView</p>
+      <div className='outer-register-form'>
+        <p className='sub-title-register'>Create a new account</p>
+        <form className='' onSubmit={(e) => handleSubmit(e)}>
+          {/* email */}
+          <div className='email-main-div'>
+            <label className='email-label'>Email address</label>
+            <input className='email-input' required type='email' name="email" value={email} onChange={(e) => setEmail(e.target.value)} />
+          </div>
+          {/* password */}
+          <div className='password-main-div'>
+            <label className='password-label'>Password</label>
+            <input className='password-input' required type='password' name='password' value={password} onChange={(e) => setPassword(e.target.value)} />
+          </div>
+          <button className='create-acc-button' variant='primary' onClick={(e) => handleSubmit(e)} type='submit'>
+            Continue
+          </button>
+          {/* go to login */}
+          <p className='already-have-account'>Already have an account? Go to login!</p>
+          {/* register success msg */}
+          {register ? (
+            <p>Accout created</p>
+          ) : (
+            // <p className=''>You are logged as a <em className='not-italic font-semibold text-[red]'>Guest</em></p>
+            <p></p>
+          )}
+        </form>
+      </div>
     </div>
 
   </>)

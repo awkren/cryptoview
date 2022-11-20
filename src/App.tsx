@@ -6,6 +6,7 @@ import About from './cryptoview-redir/About';
 import RoutesRedir from './RoutesRedir.js';
 
 function App() {
+  alert('server is running on local now :p');
   return (
     <div className="App">
       <RoutesRedir/>
