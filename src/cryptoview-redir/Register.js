@@ -95,17 +95,24 @@ const Register = () => {
     <div className=''>
       <p className='title-register'>CryptoView</p>
       <div className='outer-register-form'>
-        <p className='sub-title-register'>Create a new account</p>
         <form className='' onSubmit={(e) => handleSubmit(e)}>
           {/* email */}
+          <p className='sub-title-register'>Create a new account</p>
           <div className='email-main-div'>
             <label className='email-label'>Email address</label>
             <input className='email-input' required type='email' name="email" value={email} onChange={(e) => setEmail(e.target.value)} />
           </div>
           {/* password */}
           <div className='password-main-div'>
-            <label className='password-label'>Password</label>
+            <div className='password-label'>
+              <p className='password-name'>Password</p>
+              <p className='password-forgot'>Forgot your password?</p>
+            </div>
             <input className='password-input' required type='password' name='password' value={password} onChange={(e) => setPassword(e.target.value)} />
+          </div>
+          <div className='input-checkbox'>
+            <input className='checkbox-signed-in' type='checkbox'></input>
+            <p className='text-signed-in'>Stay signed in</p>
           </div>
           <button className='create-acc-button' variant='primary' onClick={(e) => handleSubmit(e)} type='submit'>
             Continue
