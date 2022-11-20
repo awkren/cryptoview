@@ -1,13 +1,8 @@
-import React, {useEffect, useState, useRef} from 'react'
+import React, {useEffect, useState} from 'react'
 import axios from 'axios'
 import Cookies from 'universal-cookie'
-import Login from './Login'
-import { email } from './Login'
-import { showUser } from './Login'
 
 const AuthComponent = props => {
-
-  const [inputValue, setInputValue] = useState('');
 
   const cookies = new Cookies();
   const token = cookies.get("TOKEN")
@@ -40,9 +35,6 @@ const AuthComponent = props => {
     //redirect user to home
     window.location.href= '/'
   }
-
-  //current logged user
-  console.log(showUser);
 
   return (
     <div>

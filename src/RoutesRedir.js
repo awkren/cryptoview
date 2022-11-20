@@ -11,7 +11,6 @@ import ProtectedRoutes from './cryptoview-redir/ProtectedRoutes.js'
 
 
 const RoutesRedir = () => {
-  const [userEmail, setUserEmail] = useState("");
   return (
     <React.StrictMode>
     <BrowserRouter>
