@@ -1,4 +1,4 @@
-import React, {useState, useEffect, useRef} from 'react'
+import React, {useState, useEffect} from 'react'
 import {FaTimes, FaBars} from 'react-icons/fa'
 import '../cryptoview-styles/Login.css'
 import { Redirect } from 'react-router-dom'
@@ -6,8 +6,6 @@ import axios from 'axios'
 import Cookies from 'universal-cookie'
 import AuthComponent from './AuthComponent'
 
-export let email;
-export let showUser;
 
 export default function Login({setUserEmail}) {
 
@@ -69,7 +67,7 @@ export default function Login({setUserEmail}) {
         error = new Error()
       })
   }
-  email = email;
+
   return (<>
     <section className='wrapper-login'>
       <nav className='nav-login'>
@@ -104,7 +102,7 @@ export default function Login({setUserEmail}) {
         <div id='formBasicEmail'>
           
           <label>Email address</label>
-          <input type='email' id='email-field' ref={inputRef} name="email" value={email} onChange={(e) => setEmail(e.target.value)} placeholder='Enter an email'/>
+          <input type='email' id='email-field'  name="email" value={email} onChange={(e) => setEmail(e.target.value)} placeholder='Enter an email'/>
         </div> 
         {/* password */}
         <div id='formBasicPassword'>
