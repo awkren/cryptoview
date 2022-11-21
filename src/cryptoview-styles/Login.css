@@ -217,4 +217,8 @@
     font-size: 1.1rem;
     padding-left: .5rem;
   }
+
+  .text-signed-in{
+    margin-bottom: 1rem;
+  }
 }
