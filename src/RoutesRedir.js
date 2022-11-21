@@ -21,7 +21,7 @@ const RoutesRedir = () => {
         <Route exact component={Login} path='/login'/>
         <Route component={Profile} path='/profile'/>
         <Route component={FreeComponent} path='/free'/>
-        <ProtectedRoutes component={AuthComponent} path='/auth'/>
+        <ProtectedRoutes component={AuthComponent} path='/coins'/>
       </Switch>
     </BrowserRouter>
     </React.StrictMode>

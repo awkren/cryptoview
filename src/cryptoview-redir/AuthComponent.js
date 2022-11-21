@@ -38,11 +38,16 @@ const AuthComponent = props => {
 
   return (
     <div>
-      <h1 className='text-center'>Auth Component</h1>
-      <h3 className='text-center'>{message}</h3>
-      <p>You are logged in with this unique token:<br></br>{token}</p>
+      <p className='text-[1rem] text-center mt-[.5rem] font-[400] text-[red] mb-[rem]'>You are logged in with this unique token:</p>
+      <p className='text-center text-[green]'>{token}</p>
+      <p className='text-[1rem] text-center mt-[rem] font-[400] mb-[.5rem] text-[red]'>Do not share it with anyone!</p>
+      <button type='submit' className='block m-auto bg-[red] w-[5rem] h-[2.5rem] rounded-[6px] text-[white] mb-[.5rem]' onClick={() => logout()}variant='danger'>Logout</button>
+      <hr className='w-[70%] mb-[.5rem] m-auto'></hr>
+      <p className='text-center text-[1.6rem] font-[300]'>Welcome to the</p>
+      <p className='text-center text-[1.7rem] font-[500]'>CryptoView Coin Tracker</p>
+      {/* <p className='text-center'>{message}</p> */}
+      <p className='text-center italic text-[1.1rem]'>The best coin hub on the internet!</p>
       {/* logout button */}
-      <button type='submit' onClick={() => logout()}variant='danger'>Logout</button>
     </div>
   )
 }
