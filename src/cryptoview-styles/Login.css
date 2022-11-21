@@ -179,36 +179,51 @@
 
 /* end login style */
 
-@media screen and (max-width:940px){
-  .list-login{
-  flex-direction: column;
-  height: auto;
-  background-color: #3629b0;
-  position: absolute;
-  top: 0;
-  right: 0;
-  width: 68%;
-  border-radius: 14px 14px;
+@media screen and (max-width:1670px){
+  .outer-register-form{
+    width: 32%;
   }
-  .crypto-logo-text-login{
+
+  
+
+  .sub-title-register{
+    
+  }
+}
+
+@media screen and (max-width:1367px){
+  .outer-register-form{
+    width: 37%;
+  }
+}
+
+@media screen and (max-width:1218px){
+  .outer-register-form{
+    box-shadow: none;
+  }
+
+  .password-input{
     display: block;
-    color: white;
-    padding-top: .4rem;
+    margin: auto;
+    border:0;
+    border-bottom: 1px solid black;
+    border-bottom-left-radius: 0px;
+    border-bottom-right-radius: 0px;
   }
-  .crypto-logo-text-mobile-login{
-    display: none;
-  }
-  .items-login:nth-child(1){
-    border-top: 1px solid rgb(255, 255, 255, 0.555);
-  }
-  .items-login{
-    width: 100%;
-    border-top: 1px solid rgb(255, 255, 255, 0.555);
-    text-align: center;
-    margin-right: 0px;
-    padding: 20px 0;
-  }
-  .btn-login{
+
+  .email-input{
     display: block;
+    margin: auto;
+    border:0;
+    border-bottom: 1px solid black;
+    border-bottom-left-radius: 0px;
+    border-bottom-right-radius: 0px;
+  }
+  .email-main-div{
+    margin-top:2rem;
+    margin-bottom:3rem;
+  }
+  .password-main-div{
+    margin-bottom:3rem;
   }
 }
