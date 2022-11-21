@@ -103,7 +103,7 @@ export default function Login({setUserEmail}) {
           <p className='sub-title-register'>Sign in</p>
           <div className='email-main-div'>
             <label className='email-label'>Email address</label>
-            <input className='email-input text-[1.3rem] pl-[.5rem]' required type='email' name="email" value={email} onChange={(e) => setEmail(e.target.value)} />
+            <input id='mail-input' className='email-input text-[1.3rem] pl-[.5rem]' required type='email' name="email" value={email} onChange={(e) => setEmail(e.target.value)} />
           </div>
           {/* password */}
           <div className='password-main-div'>
@@ -111,7 +111,8 @@ export default function Login({setUserEmail}) {
               <p className='password-name'>Password</p>
               <p className='password-forgot'>Forgot your password?</p>
             </div>
-            <input className='password-input text-[1.3rem] pl-[.5rem]' required type='password' name='password' value={password} onChange={(e) => setPassword(e.target.value)} />
+            <input id='pass-input' className='password-input text-[1.3rem] pl-[.5rem]' required type='password' name='password' value={password} onChange={(e) => setPassword(e.target.value)} />
+              <p className='forgot-mobile'>Forgot your password?</p>
           </div>
           <div className='input-checkbox'>
             <input className='checkbox-signed-in' type='checkbox'></input>
