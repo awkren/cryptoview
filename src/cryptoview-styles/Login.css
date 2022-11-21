@@ -177,6 +177,10 @@
   font-weight: 500;
 }
 
+.forgot-mobile{
+  display: none;
+}
+
 /* end login style */
 
 @media screen and (max-width:1700px){

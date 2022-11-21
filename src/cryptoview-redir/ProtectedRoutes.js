@@ -16,11 +16,11 @@ export default function ProtectedRoutes({ component: Component, ...rest}){
         if(token){
           return <Component {...props}/>
         } else {
-          //return the user to the lp if there is no valid token set
+          //redirect user to login page if user aint logged in
           return (
             <Redirect
               to={{
-                pathname: '/',
+                pathname: '/login',
                 state: {
                   from: props.location,
                 },
