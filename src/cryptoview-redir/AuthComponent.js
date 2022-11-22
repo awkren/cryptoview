@@ -67,7 +67,9 @@ const AuthComponent = props => {
       <p className='text-center text-[1.7rem] font-[500]'>CryptoView Coin Tracker</p>
       {/* <p className='text-center'>{message}</p> */}
       <p className='text-center italic text-[1.1rem]'>The best coin hub on the internet!</p>
-      {/* logout button */}
+      {/* coin search */}
+      <label></label>
+      <input className='border-2 w-[30rem] mt-[1rem] mb-[1rem] pl-[.5rem] text-[1.2rem] h-[3rem] rounded-[6px] border-gray-500 block m-auto' type='text' placeholder='Enter a coin name. e.g. Bitcoin'/>
     </div>
 
     <div className='featured'>
@@ -82,19 +84,17 @@ const AuthComponent = props => {
                             <img src={data[0].image} alt='/'/>
                         </div>
                         <div>
-                            <h5>{data[0].name}</h5>
-                            <p>${data[0].current_price.toLocaleString()}</p>
+                            <h5 className='coin-name'>{data[0].name}</h5>
+                            <p className='coin-price'>${data[0].current_price.toLocaleString()}</p>
                         </div>
 
                         {data[0].price_change_percentage_24h < 0 ? (
                             <span className='red'>
-                                <FiArrowDown className='icon'/>
-                                {data[0].price_change_percentage_24h.toFixed(2)}%
+                                <p className='percentage'><FiArrowDown className='icon'/>{data[0].price_change_percentage_24h.toFixed(2)}%</p>
                             </span>
                         ) : (
                             <span className='green'>
-                                <FiArrowUp className='icon'/>
-                                {data[0].price_change_percentage_24h.toFixed(2)}%
+                                <p className='percentage'><FiArrowUp className='icon'/>{data[0].price_change_percentage_24h.toFixed(2)}%</p>
                             </span>
                         )}
                     </div>
@@ -106,19 +106,17 @@ const AuthComponent = props => {
                             <img src={data[1].image} alt='/'/>
                         </div>
                         <div>
-                            <h5>{data[1].name}</h5>
-                            <p>${data[1].current_price.toLocaleString()}</p>
+                            <h5 className='coin-name'>{data[1].name}</h5>
+                            <p className='coin-price'>${data[1].current_price.toLocaleString()}</p>
                         </div>
 
                         {data[1].price_change_percentage_24h < 0 ? (
                             <span className='red'>
-                                <FiArrowDown className='icon'/>
-                                {data[1].price_change_percentage_24h.toFixed(2)}%
+                                <p className='percentage'><FiArrowDown className='icon'/>{data[1].price_change_percentage_24h.toFixed(2)}%</p>
                             </span>
                         ) : (
                             <span className='green'>
-                                <FiArrowUp className='icon'/>
-                                {data[1].price_change_percentage_24h.toFixed(2)}%
+                                <p className='percentage'><FiArrowUp className='icon'/>{data[1].price_change_percentage_24h.toFixed(2)}%</p>
                             </span>
                         )}
                     </div>
@@ -130,19 +128,17 @@ const AuthComponent = props => {
                             <img src={data[2].image} alt='/'/>
                         </div>
                         <div>
-                            <h5>{data[2].name}</h5>
-                            <p>${data[2].current_price.toLocaleString()}</p>
+                            <h5 className='coin-name'>{data[2].name}</h5>
+                            <p className='coin-price'>${data[2].current_price.toLocaleString()}</p>
                         </div>
 
                         {data[2].price_change_percentage_24h < 0 ? (
                             <span className='red'>
-                                <FiArrowDown className='icon'/>
-                                {data[2].price_change_percentage_24h.toFixed(2)}%
+                                <p className='percentage'><FiArrowDown className='icon'/>{data[2].price_change_percentage_24h.toFixed(2)}%</p>
                             </span>
                         ) : (
                             <span className='green'>
-                                <FiArrowUp className='icon'/>
-                                {data[2].price_change_percentage_24h.toFixed(2)}%
+                                <p className='percentage'><FiArrowUp className='icon'/>{data[2].price_change_percentage_24h.toFixed(2)}%</p>
                             </span>
                         )}
                     </div>
@@ -154,19 +150,17 @@ const AuthComponent = props => {
                             <img src={data[3].image} alt='/'/>
                         </div>
                         <div>
-                            <h5>{data[3].name}</h5>
-                            <p>${data[3].current_price.toLocaleString()}</p>
+                            <h5 className='coin-name'>{data[3].name}</h5>
+                            <p className='coin-price'>${data[3].current_price.toLocaleString()}</p>
                         </div>
 
                         {data[3].price_change_percentage_24h < 0 ? (
                             <span className='red'>
-                                <FiArrowDown className='icon'/>
-                                {data[3].price_change_percentage_24h.toFixed(2)}%
+                                <p className='percentage'><FiArrowDown className='icon'/>{data[3].price_change_percentage_24h.toFixed(2)}%</p>
                             </span>
                         ) : (
                             <span className='green'>
-                                <FiArrowUp className='icon'/>
-                                {data[3].price_change_percentage_24h.toFixed(2)}%
+                                <p className='percentage'><FiArrowUp className='icon'/>{data[3].price_change_percentage_24h.toFixed(2)}%</p>
                             </span>
                         )}
                     </div>
@@ -178,19 +172,17 @@ const AuthComponent = props => {
                             <img src={data[4].image} alt='/'/>
                         </div>
                         <div>
-                            <h5>{data[4].name}</h5>
-                            <p>${data[4].current_price.toLocaleString()}</p>
+                            <h5 className='coin-name'>{data[4].name}</h5>
+                            <p className='coin-price'>${data[4].current_price.toLocaleString()}</p>
                         </div>
 
                         {data[4].price_change_percentage_24h < 0 ? (
                             <span className='red'>
-                                <FiArrowDown className='icon'/>
-                                {data[4].price_change_percentage_24h.toFixed(2)}%
+                                <p className='percentage'><FiArrowDown className='icon'/>{data[4].price_change_percentage_24h.toFixed(2)}%</p>
                             </span>
                         ) : (
                             <span className='green'>
-                                <FiArrowUp className='icon'/>
-                                {data[4].price_change_percentage_24h.toFixed(2)}%
+                                <p className='percentage'><FiArrowUp className='icon'/>{data[4].price_change_percentage_24h.toFixed(2)}%</p>
                             </span>
                         )}
                     </div>
@@ -202,19 +194,17 @@ const AuthComponent = props => {
                             <img src={data[5].image} alt='/'/>
                         </div>
                         <div>
-                            <h5>{data[5].name}</h5>
-                            <p>${data[5].current_price.toLocaleString()}</p>
+                            <h5 className='coin-name'>{data[5].name}</h5>
+                            <p className='coin-price' >${data[5].current_price.toLocaleString()}</p>
                         </div>
 
                         {data[5].price_change_percentage_24h < 0 ? (
                             <span className='red'>
-                                <FiArrowDown className='icon'/>
-                                {data[5].price_change_percentage_24h.toFixed(2)}%
+                                <p className='percentage'><FiArrowDown className='icon'/>{data[5].price_change_percentage_24h.toFixed(2)}%</p>
                             </span>
                         ) : (
                             <span className='green'>
-                                <FiArrowUp className='icon'/>
-                                {data[5].price_change_percentage_24h.toFixed(2)}%
+                                <p className='percentage'><FiArrowUp className='icon'/>{data[5].price_change_percentage_24h.toFixed(2)}%</p>
                             </span>
                         )}
                     </div>
@@ -222,22 +212,20 @@ const AuthComponent = props => {
                     <div className='card'>
                         <div className='top'>
                             {/* <img src={BTC} alt='/'/> */}
-                            <img src={data[5].image} alt='/'/>
+                            <img src={data[6].image} alt='/'/>
                         </div>
                         <div>
-                            <h5>{data[5].name}</h5>
-                            <p>${data[5].current_price.toLocaleString()}</p>
+                            <h5 className='coin-name'>{data[6].name}</h5>
+                            <p className='coin-price'>${data[6].current_price.toLocaleString()}</p>
                         </div>
 
-                        {data[5].price_change_percentage_24h < 0 ? (
+                        {data[6].price_change_percentage_24h < 0 ? (
                             <span className='red'>
-                                <FiArrowDown className='icon'/>
-                                {data[5].price_change_percentage_24h.toFixed(2)}%
+                                <p className='percentage'><FiArrowDown className='icon'/>{data[6].price_change_percentage_24h.toFixed(2)}%</p>
                             </span>
                         ) : (
                             <span className='green'>
-                                <FiArrowUp className='icon'/>
-                                {data[5].price_change_percentage_24h.toFixed(2)}%
+                                <p className='percentage'><FiArrowUp className='icon'/>{data[6].price_change_percentage_24h.toFixed(2)}%</p>
                             </span>
                         )}
                     </div>
@@ -245,22 +233,20 @@ const AuthComponent = props => {
                     <div className='card'>
                         <div className='top'>
                             {/* <img src={BTC} alt='/'/> */}
-                            <img src={data[5].image} alt='/'/>
+                            <img src={data[7].image} alt='/'/>
                         </div>
                         <div>
-                            <h5>{data[5].name}</h5>
-                            <p>${data[5].current_price.toLocaleString()}</p>
+                            <h5 className='coin-name'>{data[7].name}</h5>
+                            <p className='coin-price'>${data[7].current_price.toLocaleString()}</p>
                         </div>
 
-                        {data[5].price_change_percentage_24h < 0 ? (
+                        {data[7].price_change_percentage_24h < 0 ? (
                             <span className='red'>
-                                <FiArrowDown className='icon'/>
-                                {data[5].price_change_percentage_24h.toFixed(2)}%
+                                <p className='percentage'><FiArrowDown className='icon'/>{data[7].price_change_percentage_24h.toFixed(2)}%</p>
                             </span>
                         ) : (
                             <span className='green'>
-                                <FiArrowUp className='icon'/>
-                                {data[5].price_change_percentage_24h.toFixed(2)}%
+                                <p className='percentage'><FiArrowUp className='icon'/>{data[7].price_change_percentage_24h.toFixed(2)}%</p>
                             </span>
                         )}
                     </div>
@@ -268,22 +254,20 @@ const AuthComponent = props => {
                     <div className='card'>
                         <div className='top'>
                             {/* <img src={BTC} alt='/'/> */}
-                            <img src={data[5].image} alt='/'/>
+                            <img src={data[8].image} alt='/'/>
                         </div>
                         <div>
-                            <h5>{data[5].name}</h5>
-                            <p>${data[5].current_price.toLocaleString()}</p>
+                            <h5 className='coin-name'>{data[8].name}</h5>
+                            <p className='coin-price'>${data[8].current_price.toLocaleString()}</p>
                         </div>
 
-                        {data[5].price_change_percentage_24h < 0 ? (
+                        {data[8].price_change_percentage_24h < 0 ? (
                             <span className='red'>
-                                <FiArrowDown className='icon'/>
-                                {data[5].price_change_percentage_24h.toFixed(2)}%
+                                <p className='percentage'><FiArrowDown className='icon'/>{data[8].price_change_percentage_24h.toFixed(2)}%</p>
                             </span>
                         ) : (
                             <span className='green'>
-                                <FiArrowUp className='icon'/>
-                                {data[5].price_change_percentage_24h.toFixed(2)}%
+                                <p className='percentage'><FiArrowUp className='icon'/>{data[8].price_change_percentage_24h.toFixed(2)}%</p>
                             </span>
                         )}
                     </div>
@@ -291,22 +275,20 @@ const AuthComponent = props => {
                     <div className='card'>
                         <div className='top'>
                             {/* <img src={BTC} alt='/'/> */}
-                            <img src={data[5].image} alt='/'/>
+                            <img src={data[9].image} alt='/'/>
                         </div>
                         <div>
-                            <h5>{data[5].name}</h5>
-                            <p>${data[5].current_price.toLocaleString()}</p>
+                            <h5 className='coin-name'>{data[9].name}</h5>
+                            <p className='coin-price'>${data[9].current_price.toLocaleString()}</p>
                         </div>
 
-                        {data[5].price_change_percentage_24h < 0 ? (
+                        {data[9].price_change_percentage_24h < 0 ? (
                             <span className='red'>
-                                <FiArrowDown className='icon'/>
-                                {data[5].price_change_percentage_24h.toFixed(2)}%
+                                <p className='percentage'><FiArrowDown className='icon'/>{data[9].price_change_percentage_24h.toFixed(2)}%</p>
                             </span>
                         ) : (
                             <span className='green'>
-                                <FiArrowUp className='icon'/>
-                                {data[5].price_change_percentage_24h.toFixed(2)}%
+                                <p className='percentage'><FiArrowUp className='icon'/>{data[9].price_change_percentage_24h.toFixed(2)}%</p>
                             </span>
                         )}
                     </div>
@@ -314,22 +296,20 @@ const AuthComponent = props => {
                     <div className='card'>
                         <div className='top'>
                             {/* <img src={BTC} alt='/'/> */}
-                            <img src={data[5].image} alt='/'/>
+                            <img src={data[10].image} alt='/'/>
                         </div>
                         <div>
-                            <h5>{data[5].name}</h5>
-                            <p>${data[5].current_price.toLocaleString()}</p>
+                            <h5 className='coin-name'>{data[10].name}</h5>
+                            <p className='coin-price'>${data[10].current_price.toLocaleString()}</p>
                         </div>
 
-                        {data[5].price_change_percentage_24h < 0 ? (
+                        {data[10].price_change_percentage_24h < 0 ? (
                             <span className='red'>
-                                <FiArrowDown className='icon'/>
-                                {data[5].price_change_percentage_24h.toFixed(2)}%
+                                <p className='percentage'><FiArrowDown className='icon'/>{data[10].price_change_percentage_24h.toFixed(2)}%</p>
                             </span>
                         ) : (
                             <span className='green'>
-                                <FiArrowUp className='icon'/>
-                                {data[5].price_change_percentage_24h.toFixed(2)}%
+                                <p className='percentage'><FiArrowUp className='icon'/>{data[10].price_change_percentage_24h.toFixed(2)}%</p>
                             </span>
                         )}
                     </div>
@@ -337,22 +317,20 @@ const AuthComponent = props => {
                     <div className='card'>
                         <div className='top'>
                             {/* <img src={BTC} alt='/'/> */}
-                            <img src={data[5].image} alt='/'/>
+                            <img src={data[11].image} alt='/'/>
                         </div>
                         <div>
-                            <h5>{data[5].name}</h5>
-                            <p>${data[5].current_price.toLocaleString()}</p>
+                            <h5 className='coin-name'>{data[11].name}</h5>
+                            <p className='coin-price'>${data[11].current_price.toLocaleString()}</p>
                         </div>
 
-                        {data[5].price_change_percentage_24h < 0 ? (
+                        {data[11].price_change_percentage_24h < 0 ? (
                             <span className='red'>
-                                <FiArrowDown className='icon'/>
-                                {data[5].price_change_percentage_24h.toFixed(2)}%
+                                <p className='percentage'><FiArrowDown className='icon'/>{data[11].price_change_percentage_24h.toFixed(2)}%</p>
                             </span>
                         ) : (
                             <span className='green'>
-                                <FiArrowUp className='icon'/>
-                                {data[5].price_change_percentage_24h.toFixed(2)}%
+                                <p className='percentage'><FiArrowUp className='icon'/>{data[11].price_change_percentage_24h.toFixed(2)}%</p>
                             </span>
                         )}
                     </div>
@@ -360,22 +338,20 @@ const AuthComponent = props => {
                     <div className='card'>
                         <div className='top'>
                             {/* <img src={BTC} alt='/'/> */}
-                            <img src={data[5].image} alt='/'/>
+                            <img src={data[12].image} alt='/'/>
                         </div>
                         <div>
-                            <h5>{data[5].name}</h5>
-                            <p>${data[5].current_price.toLocaleString()}</p>
+                            <h5 className='coin-name'>{data[12].name}</h5>
+                            <p className='coin-price'>${data[12].current_price.toLocaleString()}</p>
                         </div>
 
-                        {data[5].price_change_percentage_24h < 0 ? (
+                        {data[12].price_change_percentage_24h < 0 ? (
                             <span className='red'>
-                                <FiArrowDown className='icon'/>
-                                {data[5].price_change_percentage_24h.toFixed(2)}%
+                                <p className='percentage'><FiArrowDown className='icon'/>{data[12].price_change_percentage_24h.toFixed(2)}%</p>
                             </span>
                         ) : (
                             <span className='green'>
-                                <FiArrowUp className='icon'/>
-                                {data[5].price_change_percentage_24h.toFixed(2)}%
+                                <p className='percentage'><FiArrowUp className='icon'/>{data[12].price_change_percentage_24h.toFixed(2)}%</p>
                             </span>
                         )}
                     </div>
@@ -383,22 +359,20 @@ const AuthComponent = props => {
                     <div className='card'>
                         <div className='top'>
                             {/* <img src={BTC} alt='/'/> */}
-                            <img src={data[5].image} alt='/'/>
+                            <img src={data[13].image} alt='/'/>
                         </div>
                         <div>
-                            <h5>{data[5].name}</h5>
-                            <p>${data[5].current_price.toLocaleString()}</p>
+                            <h5 className='coin-name'>{data[13].name}</h5>
+                            <p className='coin-price'>${data[13].current_price.toLocaleString()}</p>
                         </div>
 
-                        {data[5].price_change_percentage_24h < 0 ? (
+                        {data[13].price_change_percentage_24h < 0 ? (
                             <span className='red'>
-                                <FiArrowDown className='icon'/>
-                                {data[5].price_change_percentage_24h.toFixed(2)}%
+                                <p className='percentage'><FiArrowDown className='icon'/>{data[13].price_change_percentage_24h.toFixed(2)}%</p>
                             </span>
                         ) : (
                             <span className='green'>
-                                <FiArrowUp className='icon'/>
-                                {data[5].price_change_percentage_24h.toFixed(2)}%
+                                <p className='percentage'><FiArrowUp className='icon'/>{data[13].price_change_percentage_24h.toFixed(2)}%</p>
                             </span>
                         )}
                     </div>
@@ -406,22 +380,20 @@ const AuthComponent = props => {
                     <div className='card'>
                         <div className='top'>
                             {/* <img src={BTC} alt='/'/> */}
-                            <img src={data[5].image} alt='/'/>
+                            <img src={data[14].image} alt='/'/>
                         </div>
                         <div>
-                            <h5>{data[5].name}</h5>
-                            <p>${data[5].current_price.toLocaleString()}</p>
+                            <h5 className='coin-name'>{data[14].name}</h5>
+                            <p className='coin-price'>${data[14].current_price.toLocaleString()}</p>
                         </div>
 
-                        {data[5].price_change_percentage_24h < 0 ? (
+                        {data[14].price_change_percentage_24h < 0 ? (
                             <span className='red'>
-                                <FiArrowDown className='icon'/>
-                                {data[5].price_change_percentage_24h.toFixed(2)}%
+                                <p className='percentage'><FiArrowDown className='icon'/>{data[14].price_change_percentage_24h.toFixed(2)}%</p>
                             </span>
                         ) : (
                             <span className='green'>
-                                <FiArrowUp className='icon'/>
-                                {data[5].price_change_percentage_24h.toFixed(2)}%
+                                <p className='percentage'><FiArrowUp className='icon'/>{data[14].price_change_percentage_24h.toFixed(2)}%</p>
                             </span>
                         )}
                     </div>
@@ -429,22 +401,20 @@ const AuthComponent = props => {
                     <div className='card'>
                         <div className='top'>
                             {/* <img src={BTC} alt='/'/> */}
-                            <img src={data[5].image} alt='/'/>
+                            <img src={data[15].image} alt='/'/>
                         </div>
                         <div>
-                            <h5>{data[5].name}</h5>
-                            <p>${data[5].current_price.toLocaleString()}</p>
+                            <h5 className='coin-name'>{data[15].name}</h5>
+                            <p className='coin-price'>${data[15].current_price.toLocaleString()}</p>
                         </div>
 
-                        {data[5].price_change_percentage_24h < 0 ? (
+                        {data[15].price_change_percentage_24h < 0 ? (
                             <span className='red'>
-                                <FiArrowDown className='icon'/>
-                                {data[5].price_change_percentage_24h.toFixed(2)}%
+                                <p className='percentage'><FiArrowDown className='icon'/>{data[15].price_change_percentage_24h.toFixed(2)}%</p>
                             </span>
                         ) : (
                             <span className='green'>
-                                <FiArrowUp className='icon'/>
-                                {data[5].price_change_percentage_24h.toFixed(2)}%
+                                <p className='percentage'><FiArrowUp className='icon'/>{data[15].price_change_percentage_24h.toFixed(2)}%</p>
                             </span>
                         )}
                     </div>
@@ -452,22 +422,20 @@ const AuthComponent = props => {
                     <div className='card'>
                         <div className='top'>
                             {/* <img src={BTC} alt='/'/> */}
-                            <img src={data[5].image} alt='/'/>
+                            <img src={data[16].image} alt='/'/>
                         </div>
                         <div>
-                            <h5>{data[5].name}</h5>
-                            <p>${data[5].current_price.toLocaleString()}</p>
+                            <h5 className='coin-name'>{data[16].name}</h5>
+                            <p className='coin-price'>${data[16].current_price.toLocaleString()}</p>
                         </div>
 
-                        {data[5].price_change_percentage_24h < 0 ? (
+                        {data[16].price_change_percentage_24h < 0 ? (
                             <span className='red'>
-                                <FiArrowDown className='icon'/>
-                                {data[5].price_change_percentage_24h.toFixed(2)}%
+                                <p className='percentage'><FiArrowDown className='icon'/>{data[16].price_change_percentage_24h.toFixed(2)}%</p>
                             </span>
                         ) : (
                             <span className='green'>
-                                <FiArrowUp className='icon'/>
-                                {data[5].price_change_percentage_24h.toFixed(2)}%
+                                <p className='percentage'><FiArrowUp className='icon'/>{data[16].price_change_percentage_24h.toFixed(2)}%</p>
                             </span>
                         )}
                     </div>
@@ -475,22 +443,20 @@ const AuthComponent = props => {
                     <div className='card'>
                         <div className='top'>
                             {/* <img src={BTC} alt='/'/> */}
-                            <img src={data[5].image} alt='/'/>
+                            <img src={data[17].image} alt='/'/>
                         </div>
                         <div>
-                            <h5>{data[5].name}</h5>
-                            <p>${data[5].current_price.toLocaleString()}</p>
+                            <h5 className='coin-name'>{data[17].name}</h5>
+                            <p className='coin-price'>${data[17].current_price.toLocaleString()}</p>
                         </div>
 
-                        {data[5].price_change_percentage_24h < 0 ? (
+                        {data[17].price_change_percentage_24h < 0 ? (
                             <span className='red'>
-                                <FiArrowDown className='icon'/>
-                                {data[5].price_change_percentage_24h.toFixed(2)}%
+                                <p className='percentage'><FiArrowDown className='icon'/>{data[17].price_change_percentage_24h.toFixed(2)}%</p>
                             </span>
                         ) : (
                             <span className='green'>
-                                <FiArrowUp className='icon'/>
-                                {data[5].price_change_percentage_24h.toFixed(2)}%
+                                <p className='percentage'><FiArrowUp className='icon'/>{data[17].price_change_percentage_24h.toFixed(2)}%</p>
                             </span>
                         )}
                     </div>
@@ -498,22 +464,20 @@ const AuthComponent = props => {
                     <div className='card'>
                         <div className='top'>
                             {/* <img src={BTC} alt='/'/> */}
-                            <img src={data[5].image} alt='/'/>
+                            <img src={data[18].image} alt='/'/>
                         </div>
                         <div>
-                            <h5>{data[5].name}</h5>
-                            <p>${data[5].current_price.toLocaleString()}</p>
+                            <h5 className='coin-name'>{data[18].name}</h5>
+                            <p className='coin-price'>${data[18].current_price.toLocaleString()}</p>
                         </div>
 
-                        {data[5].price_change_percentage_24h < 0 ? (
+                        {data[18].price_change_percentage_24h < 0 ? (
                             <span className='red'>
-                                <FiArrowDown className='icon'/>
-                                {data[5].price_change_percentage_24h.toFixed(2)}%
+                                <p className='percentage'><FiArrowDown className='icon'/>{data[18].price_change_percentage_24h.toFixed(2)}%</p>
                             </span>
                         ) : (
                             <span className='green'>
-                                <FiArrowUp className='icon'/>
-                                {data[5].price_change_percentage_24h.toFixed(2)}%
+                                <p className='percentage'><FiArrowUp className='icon'/>{data[18].price_change_percentage_24h.toFixed(2)}%</p>
                             </span>
                         )}
                     </div>
@@ -521,22 +485,20 @@ const AuthComponent = props => {
                     <div className='card'>
                         <div className='top'>
                             {/* <img src={BTC} alt='/'/> */}
-                            <img src={data[5].image} alt='/'/>
+                            <img src={data[19].image} alt='/'/>
                         </div>
                         <div>
-                            <h5>{data[5].name}</h5>
-                            <p>${data[5].current_price.toLocaleString()}</p>
+                            <h5 className='coin-name'>{data[19].name}</h5>
+                            <p className='coin-price'>${data[19].current_price.toLocaleString()}</p>
                         </div>
 
-                        {data[5].price_change_percentage_24h < 0 ? (
+                        {data[19].price_change_percentage_24h < 0 ? (
                             <span className='red'>
-                                <FiArrowDown className='icon'/>
-                                {data[5].price_change_percentage_24h.toFixed(2)}%
+                                <p className='percentage'><FiArrowDown className='icon'/>{data[19].price_change_percentage_24h.toFixed(2)}%</p>
                             </span>
                         ) : (
                             <span className='green'>
-                                <FiArrowUp className='icon'/>
-                                {data[5].price_change_percentage_24h.toFixed(2)}%
+                                <p className='percentage'><FiArrowUp className='icon'/>{data[19].price_change_percentage_24h.toFixed(2)}%</p>
                             </span>
                         )}
                     </div>
@@ -544,22 +506,20 @@ const AuthComponent = props => {
                     <div className='card'>
                         <div className='top'>
                             {/* <img src={BTC} alt='/'/> */}
-                            <img src={data[5].image} alt='/'/>
+                            <img src={data[20].image} alt='/'/>
                         </div>
                         <div>
-                            <h5>{data[5].name}</h5>
-                            <p>${data[5].current_price.toLocaleString()}</p>
+                            <h5 className='coin-name'>{data[20].name}</h5>
+                            <p className='coin-price'>${data[20].current_price.toLocaleString()}</p>
                         </div>
 
-                        {data[5].price_change_percentage_24h < 0 ? (
+                        {data[20].price_change_percentage_24h < 0 ? (
                             <span className='red'>
-                                <FiArrowDown className='icon'/>
-                                {data[5].price_change_percentage_24h.toFixed(2)}%
+                                <p className='percentage'><FiArrowDown className='icon'/>{data[20].price_change_percentage_24h.toFixed(2)}%</p>
                             </span>
                         ) : (
                             <span className='green'>
-                                <FiArrowUp className='icon'/>
-                                {data[5].price_change_percentage_24h.toFixed(2)}%
+                                <p className='percentage'><FiArrowUp className='icon'/>{data[20].price_change_percentage_24h.toFixed(2)}%</p>
                             </span>
                         )}
                     </div>
@@ -567,22 +527,20 @@ const AuthComponent = props => {
                     <div className='card'>
                         <div className='top'>
                             {/* <img src={BTC} alt='/'/> */}
-                            <img src={data[5].image} alt='/'/>
+                            <img src={data[21].image} alt='/'/>
                         </div>
                         <div>
-                            <h5>{data[5].name}</h5>
-                            <p>${data[5].current_price.toLocaleString()}</p>
+                            <h5 className='coin-name'>{data[21].name}</h5>
+                            <p className='coin-price'>${data[21].current_price.toLocaleString()}</p>
                         </div>
 
-                        {data[5].price_change_percentage_24h < 0 ? (
+                        {data[21].price_change_percentage_24h < 0 ? (
                             <span className='red'>
-                                <FiArrowDown className='icon'/>
-                                {data[5].price_change_percentage_24h.toFixed(2)}%
+                                <p className='percentage'><FiArrowDown className='icon'/>{data[21].price_change_percentage_24h.toFixed(2)}%</p>
                             </span>
                         ) : (
                             <span className='green'>
-                                <FiArrowUp className='icon'/>
-                                {data[5].price_change_percentage_24h.toFixed(2)}%
+                                <p className='percentage'><FiArrowUp className='icon'/>{data[21].price_change_percentage_24h.toFixed(2)}%</p>
                             </span>
                         )}
                     </div>
@@ -590,22 +548,20 @@ const AuthComponent = props => {
                     <div className='card'>
                         <div className='top'>
                             {/* <img src={BTC} alt='/'/> */}
-                            <img src={data[5].image} alt='/'/>
+                            <img src={data[22].image} alt='/'/>
                         </div>
                         <div>
-                            <h5>{data[5].name}</h5>
-                            <p>${data[5].current_price.toLocaleString()}</p>
+                            <h5 className='coin-name'>{data[22].name}</h5>
+                            <p className='coin-price'>${data[22].current_price.toLocaleString()}</p>
                         </div>
 
-                        {data[5].price_change_percentage_24h < 0 ? (
+                        {data[22].price_change_percentage_24h < 0 ? (
                             <span className='red'>
-                                <FiArrowDown className='icon'/>
-                                {data[5].price_change_percentage_24h.toFixed(2)}%
+                                <p className='percentage'><FiArrowDown className='icon'/>{data[22].price_change_percentage_24h.toFixed(2)}%</p>
                             </span>
                         ) : (
                             <span className='green'>
-                                <FiArrowUp className='icon'/>
-                                {data[5].price_change_percentage_24h.toFixed(2)}%
+                                <p className='percentage'><FiArrowUp className='icon'/>{data[22].price_change_percentage_24h.toFixed(2)}%</p>
                             </span>
                         )}
                     </div>
@@ -613,22 +569,20 @@ const AuthComponent = props => {
                     <div className='card'>
                         <div className='top'>
                             {/* <img src={BTC} alt='/'/> */}
-                            <img src={data[5].image} alt='/'/>
+                            <img src={data[23].image} alt='/'/>
                         </div>
                         <div>
-                            <h5>{data[5].name}</h5>
-                            <p>${data[5].current_price.toLocaleString()}</p>
+                            <h5 className='coin-name'>{data[23].name}</h5>
+                            <p className='coin-price'>${data[23].current_price.toLocaleString()}</p>
                         </div>
 
-                        {data[5].price_change_percentage_24h < 0 ? (
+                        {data[23].price_change_percentage_24h < 0 ? (
                             <span className='red'>
-                                <FiArrowDown className='icon'/>
-                                {data[5].price_change_percentage_24h.toFixed(2)}%
+                                <p className='percentage'><FiArrowDown className='icon'/>{data[23].price_change_percentage_24h.toFixed(2)}%</p>
                             </span>
                         ) : (
                             <span className='green'>
-                                <FiArrowUp className='icon'/>
-                                {data[5].price_change_percentage_24h.toFixed(2)}%
+                                <p className='percentage'><FiArrowUp className='icon'/>{data[23].price_change_percentage_24h.toFixed(2)}%</p>
                             </span>
                         )}
                     </div>
@@ -636,22 +590,20 @@ const AuthComponent = props => {
                     <div className='card'>
                         <div className='top'>
                             {/* <img src={BTC} alt='/'/> */}
-                            <img src={data[5].image} alt='/'/>
+                            <img src={data[24].image} alt='/'/>
                         </div>
                         <div>
-                            <h5>{data[5].name}</h5>
-                            <p>${data[5].current_price.toLocaleString()}</p>
+                            <h5 className='coin-name'>{data[24].name}</h5>
+                            <p className='coin-price'>${data[24].current_price.toLocaleString()}</p>
                         </div>
 
-                        {data[5].price_change_percentage_24h < 0 ? (
+                        {data[24].price_change_percentage_24h < 0 ? (
                             <span className='red'>
-                                <FiArrowDown className='icon'/>
-                                {data[5].price_change_percentage_24h.toFixed(2)}%
+                                <p className='percentage'><FiArrowDown className='icon'/>{data[24].price_change_percentage_24h.toFixed(2)}%</p>
                             </span>
                         ) : (
                             <span className='green'>
-                                <FiArrowUp className='icon'/>
-                                {data[5].price_change_percentage_24h.toFixed(2)}%
+                                <p className='percentage'><FiArrowUp className='icon'/>{data[24].price_change_percentage_24h.toFixed(2)}%</p>
                             </span>
                         )}
                     </div>
@@ -659,22 +611,20 @@ const AuthComponent = props => {
                     <div className='card'>
                         <div className='top'>
                             {/* <img src={BTC} alt='/'/> */}
-                            <img src={data[5].image} alt='/'/>
+                            <img src={data[25].image} alt='/'/>
                         </div>
                         <div>
-                            <h5>{data[5].name}</h5>
-                            <p>${data[5].current_price.toLocaleString()}</p>
+                            <h5 className='coin-name'>{data[25].name}</h5>
+                            <p className='coin-price'>${data[25].current_price.toLocaleString()}</p>
                         </div>
 
-                        {data[5].price_change_percentage_24h < 0 ? (
+                        {data[25].price_change_percentage_24h < 0 ? (
                             <span className='red'>
-                                <FiArrowDown className='icon'/>
-                                {data[5].price_change_percentage_24h.toFixed(2)}%
+                                <p className='percentage'><FiArrowDown className='icon'/>{data[25].price_change_percentage_24h.toFixed(2)}%</p>
                             </span>
                         ) : (
                             <span className='green'>
-                                <FiArrowUp className='icon'/>
-                                {data[5].price_change_percentage_24h.toFixed(2)}%
+                                <p className='percentage'><FiArrowUp className='icon'/>{data[25].price_change_percentage_24h.toFixed(2)}%</p>
                             </span>
                         )}
                     </div>
@@ -682,22 +632,20 @@ const AuthComponent = props => {
                     <div className='card'>
                         <div className='top'>
                             {/* <img src={BTC} alt='/'/> */}
-                            <img src={data[5].image} alt='/'/>
+                            <img src={data[26].image} alt='/'/>
                         </div>
                         <div>
-                            <h5>{data[5].name}</h5>
-                            <p>${data[5].current_price.toLocaleString()}</p>
+                            <h5 className='coin-name'>{data[26].name}</h5>
+                            <p className='coin-price'>${data[26].current_price.toLocaleString()}</p>
                         </div>
 
-                        {data[5].price_change_percentage_24h < 0 ? (
+                        {data[26].price_change_percentage_24h < 0 ? (
                             <span className='red'>
-                                <FiArrowDown className='icon'/>
-                                {data[5].price_change_percentage_24h.toFixed(2)}%
+                                <p className='percentage'><FiArrowDown className='icon'/>{data[26].price_change_percentage_24h.toFixed(2)}%</p>
                             </span>
                         ) : (
                             <span className='green'>
-                                <FiArrowUp className='icon'/>
-                                {data[5].price_change_percentage_24h.toFixed(2)}%
+                                <p className='percentage'><FiArrowUp className='icon'/>{data[26].price_change_percentage_24h.toFixed(2)}%</p>
                             </span>
                         )}
                     </div>
@@ -705,22 +653,20 @@ const AuthComponent = props => {
                     <div className='card'>
                         <div className='top'>
                             {/* <img src={BTC} alt='/'/> */}
-                            <img src={data[5].image} alt='/'/>
+                            <img src={data[27].image} alt='/'/>
                         </div>
                         <div>
-                            <h5>{data[5].name}</h5>
-                            <p>${data[5].current_price.toLocaleString()}</p>
+                            <h5 className='coin-name'>{data[27].name}</h5>
+                            <p className='coin-price'>${data[27].current_price.toLocaleString()}</p>
                         </div>
 
-                        {data[5].price_change_percentage_24h < 0 ? (
+                        {data[27].price_change_percentage_24h < 0 ? (
                             <span className='red'>
-                                <FiArrowDown className='icon'/>
-                                {data[5].price_change_percentage_24h.toFixed(2)}%
+                                <p className='percentage'><FiArrowDown className='icon'/>{data[27].price_change_percentage_24h.toFixed(2)}%</p>
                             </span>
                         ) : (
                             <span className='green'>
-                                <FiArrowUp className='icon'/>
-                                {data[5].price_change_percentage_24h.toFixed(2)}%
+                                <p className='percentage'><FiArrowUp className='icon'/>{data[27].price_change_percentage_24h.toFixed(2)}%</p>
                             </span>
                         )}
                     </div>
@@ -728,22 +674,20 @@ const AuthComponent = props => {
                     <div className='card'>
                         <div className='top'>
                             {/* <img src={BTC} alt='/'/> */}
-                            <img src={data[5].image} alt='/'/>
+                            <img src={data[28].image} alt='/'/>
                         </div>
                         <div>
-                            <h5>{data[5].name}</h5>
-                            <p>${data[5].current_price.toLocaleString()}</p>
+                            <h5 className='coin-name'>{data[28].name}</h5>
+                            <p className='coin-price'>${data[28].current_price.toLocaleString()}</p>
                         </div>
 
-                        {data[5].price_change_percentage_24h < 0 ? (
+                        {data[28].price_change_percentage_24h < 0 ? (
                             <span className='red'>
-                                <FiArrowDown className='icon'/>
-                                {data[5].price_change_percentage_24h.toFixed(2)}%
+                                <p className='percentage'><FiArrowDown className='icon'/>{data[28].price_change_percentage_24h.toFixed(2)}%</p>
                             </span>
                         ) : (
                             <span className='green'>
-                                <FiArrowUp className='icon'/>
-                                {data[5].price_change_percentage_24h.toFixed(2)}%
+                                <p className='percentage'><FiArrowUp className='icon'/>{data[28].price_change_percentage_24h.toFixed(2)}%</p>
                             </span>
                         )}
                     </div>
@@ -751,22 +695,20 @@ const AuthComponent = props => {
                     <div className='card'>
                         <div className='top'>
                             {/* <img src={BTC} alt='/'/> */}
-                            <img src={data[5].image} alt='/'/>
+                            <img src={data[29].image} alt='/'/>
                         </div>
                         <div>
-                            <h5>{data[5].name}</h5>
-                            <p>${data[5].current_price.toLocaleString()}</p>
+                            <h5 className='coin-name'>{data[29].name}</h5>
+                            <p className='coin-price'>${data[29].current_price.toLocaleString()}</p>
                         </div>
 
-                        {data[5].price_change_percentage_24h < 0 ? (
+                        {data[29].price_change_percentage_24h < 0 ? (
                             <span className='red'>
-                                <FiArrowDown className='icon'/>
-                                {data[5].price_change_percentage_24h.toFixed(2)}%
+                                <p className='percentage'><FiArrowDown className='icon'/>{data[29].price_change_percentage_24h.toFixed(2)}%</p>
                             </span>
                         ) : (
                             <span className='green'>
-                                <FiArrowUp className='icon'/>
-                                {data[5].price_change_percentage_24h.toFixed(2)}%
+                                <p className='percentage'><FiArrowUp className='icon'/>{data[29].price_change_percentage_24h.toFixed(2)}%</p>
                             </span>
                         )}
                     </div>
