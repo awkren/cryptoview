@@ -122,7 +122,9 @@
   }
 
   #search-coin{
-    width: 25rem;
+    width: 18rem;
+    font-size: 1rem;
+    margin-bottom: .5rem;
   }
 
   .featured .right .card{
