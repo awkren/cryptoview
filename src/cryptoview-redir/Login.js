@@ -63,7 +63,6 @@ export default function Login({setUserEmail}) {
         cookies.set('currentUser', result.data.email, {
           path: '/'
         })
-        // console.log(cookies.get('currentUser'))
         window.location.href = '/coins'
         
       })

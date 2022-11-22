@@ -37,7 +37,8 @@ const AuthComponent = props => {
   // logout func
   const logout = () =>{
     //destroy cookie
-    cookies.remove("TOKEN", { path: '/'})
+    cookies.remove("TOKEN", { path: '/'}) //remove access token cookie
+    cookies.remove('currentUser', { path: '/'}) // remove current user cookie
     //redirect user to home
     window.location.href= '/'
   }
@@ -56,15 +57,12 @@ const AuthComponent = props => {
 
   if(!data) return null;
 
-  let userDetails = cookies.get('user')
-  console.log(userDetails)
-
   return (<>
     <div>
-      <p className='text-[1rem] text-center mt-[.5rem] font-[400] text-[red] mb-[rem]'>You are logged in with this unique token:</p>
+      <p className='text-[1rem] text-center mt-[.5rem] font-[400] text-[red] mb-[]'>You are logged as:</p>
       {/* <p className='text-center text-[green]'>{token}</p> */}
-      <p>{cookies.get('currentUser')}</p>
-      <p className='text-[1rem] text-center mt-[rem] font-[400] mb-[.5rem] text-[red]'>Do not share it with anyone!</p>
+      <p className='text-center text-[1.2rem] font-[500] mb-[.5rem]'>{cookies.get('currentUser')}</p>
+      {/* <p className='text-[1rem] text-center mt-[rem] font-[400] mb-[.5rem] text-[red]'>Do not share it with anyone!</p> */}
       <button type='submit' className='block m-auto bg-[red] w-[5rem] h-[2.5rem] rounded-[6px] text-[white] mb-[.5rem]' onClick={() => logout()}variant='danger'>Logout</button>
       {/* <p className='text-center italic'>powered by CoinGecko</p> */}
       <hr className='w-[70%] mb-[.5rem] m-auto'></hr>
