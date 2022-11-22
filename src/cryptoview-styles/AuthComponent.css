@@ -108,9 +108,21 @@
   display: flex;
 }
 
+#search-coin{
+  margin-bottom: 2rem;
+}
+
+#search-coin::placeholder{
+  text-align: center;
+}
+
 @media screen and (max-width: 940px) {
   .featured .container {
       grid-template-columns: 1fr;
+  }
+
+  #search-coin{
+    width: 25rem;
   }
 
   .featured .right .card{
