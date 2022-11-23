@@ -1,0 +1,21 @@
+#demo-info{
+  /* width: 100%;
+  padding: 6rem 0;
+  background-color: #ccc;
+  clip-path: polygon(0% 10%, 100% 0%, 100% 90%, 0% 100%); */
+}
+
+#demo-create-acc{
+  box-shadow: rgb(0 0 0 / 12%) 0px 8px 24px;
+}
+
+@media screen and (max-width:940px){
+  #before-demo-create-acc{
+    margin-top:2rem;
+  }
+  #about-demo-div p{
+    text-align: center;
+    width: 95%;
+    margin: auto;
+  }
+}

@@ -20,7 +20,7 @@ const RoutesRedir = () => {
         <Route exact component={Register} path='/register'/>
         <Route exact component={Login} path='/login'/>
         <Route component={Profile} path='/profile'/>
-        <Route component={FreeComponent} path='/free'/>
+        <Route component={FreeComponent} path='/demo'/>
         <ProtectedRoutes component={AuthComponent} path='/coins'/>
       </Switch>
     </BrowserRouter>
