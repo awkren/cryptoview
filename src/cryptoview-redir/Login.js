@@ -5,6 +5,7 @@ import { Redirect } from 'react-router-dom'
 import axios from 'axios'
 import Cookies from 'universal-cookie'
 import AuthComponent from './AuthComponent'
+import { validEmail, validPassword } from '../Regex'
 
 
 export default function Login({setUserEmail}) {
@@ -16,6 +17,9 @@ export default function Login({setUserEmail}) {
   const [email, setEmail] = useState("")
   const [password, setPassword] = useState("")
   const [login, setLogin] = useState(false);
+  //regex email, password
+  const [emailErr, setEmailErr] = useState(false);
+  // const [pwdError, setPwdError] = useEffect(false)
 
   const cookies = new Cookies();
 
