@@ -125,6 +125,7 @@ const Register = () => {
           ) : (
             // <p className=''>You are logged as a <em class  Name='not-italic font-semibold text-[red]'>Guest</em></p>
             // <p>Email already exists in our database!</p>
+            <p></p>
           )}
         </form>
       </div>
