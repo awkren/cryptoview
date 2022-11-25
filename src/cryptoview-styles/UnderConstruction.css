@@ -1,0 +1,19 @@
+@media screen and (max-width:940px){
+  #main-under{
+    width: 80%;
+    margin: auto;
+    gap: 1.5rem;
+  }
+  #page-under{
+    font-size: 2.5rem;
+    text-align: center;
+    text-transform: uppercase;
+    font-weight: 500;
+  }
+  #text-rest{
+    text-align: center;
+  }
+  #gohome{
+    text-align: center;
+  }
+}

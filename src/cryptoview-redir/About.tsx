@@ -1,8 +1,10 @@
 import React from 'react'
+import '../cryptoview-styles/About.css'
+import UnderConstruction from '../UnderConstruction'
 
 const About = () => {
   return (
-    <div>about page</div>
+    <UnderConstruction/>
   )
 }
 
