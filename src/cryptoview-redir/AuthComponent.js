@@ -69,10 +69,10 @@ const AuthComponent = props => {
       <p className='text-center text-[1.6rem] font-[300]'>Welcome to the</p>
       <p className='text-center text-[1.7rem] font-[500]'>CryptoView Coin Tracker</p>
       {/* <p className='text-center'>{message}</p> */}
-      <p className='text-center italic text-[1.1rem]'>The best coin hub on the internet!</p>
+      <p className='text-center italic text-[1.1rem] mb-[2rem]'>The best coin hub on the internet!</p>
       {/* coin search */}
       <label></label>
-      <input id='search-coin' className='border-2 w-[30rem] mt-[1rem] mb-[1rem] pl-[.5rem] text-[1.2rem] h-[3rem] rounded-[6px] border-gray-500 block m-auto' type='text' placeholder='Search for a coin. e.g. Bitcoin'/>
+      {/* <input id='search-coin' className='border-2 w-[30rem] mt-[1rem] mb-[1rem] pl-[.5rem] text-[1.2rem] h-[3rem] rounded-[6px] border-gray-500 block m-auto' type='text' placeholder='Search for a coin. e.g. Bitcoin'/> */}
       {/* <p className='text-center text-[1.1rem] mb-[2rem]'>Showing you the top 30 coins of the day!</p> */}
     </div>
 

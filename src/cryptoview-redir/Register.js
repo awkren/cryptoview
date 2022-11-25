@@ -4,6 +4,7 @@ import '../cryptoview-styles/Register.css'
 import { Redirect } from 'react-router-dom'
 import axios from 'axios'
 import {validEmail, validPassword} from '../Regex.jsx'
+import userEvent from '@testing-library/user-event'
 
 const Register = () => {
 
@@ -54,8 +55,9 @@ const Register = () => {
         password,
       },
     }
+    // if(User.findOne())
     if(password.length < 5){
-      alert('passwords must have at least 3 characters!')
+      alert('passwords must have at least 5 characters!')
       return Error;
     }
 
@@ -121,8 +123,8 @@ const Register = () => {
             // <p>Accout created</p>
             alert('Account created, taking you to the login page. :)')
           ) : (
-            // <p className=''>You are logged as a <em className='not-italic font-semibold text-[red]'>Guest</em></p>
-            <p></p>
+            // <p className=''>You are logged as a <em class  Name='not-italic font-semibold text-[red]'>Guest</em></p>
+            <p>Email already exists in our database!</p>
           )}
         </form>
       </div>
