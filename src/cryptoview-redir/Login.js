@@ -111,7 +111,6 @@ export default function Login({setUserEmail}) {
             // <p>Login successful</p>
             alert("Login successful")
           ) : (
-            // <p className=''>You are logged as a <em className='not-italic font-semibold text-[red]'>Guest</em></p>
             <p></p>
           )}
         </form>
