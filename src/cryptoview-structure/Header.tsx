@@ -24,9 +24,9 @@ const Header = () => {
   }, [])
 
   
-  // login routing
   const [goToLogin, setGoToLogin] = React.useState(false);
   const [goToRegister, setGoToRegister] = React.useState(false);
+  // const [go]
 
   if(goToLogin){
     // return <Redirect to='/login'/>; *react-router-dom v5.1.2+
@@ -45,8 +45,8 @@ const Header = () => {
           <p className='crypto-logo-text'>CryptoView</p>
           {(toggleMenu || screenWidth > 940) && (
               <ul className='list'>
-                  <li className='items'>Earn</li>
-                  <li className='items'>Courses</li>
+                  <li className='items'><a href='/earn'>Earn</a></li>
+                  <li className='items'><a href='/courses'>Courses</a></li>
                   <li className='crypto-logo-text-mobile'>CryptoView</li>
                   <li className='items' onClick={() => {
                     setGoToLogin(true);
