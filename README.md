@@ -14,7 +14,6 @@ Besides showing you info about cryptocurrencies, it features a login/registratio
 Plus, it has an Auth system that checks users credentials through a unique token.
 
 ## 🚀 How to run CryptoView locally?
-<br>
 
 Clone the repo to your computer:
 ```
@@ -30,4 +29,29 @@ And start the project with:
 
 ```
 npm start
+```
+
+## How to setup CryptoView server?
+
+First, <a href='https://github.com/wuzue/cryptoview-server'>clone this repository with:</a>
+```
+git clone https://github.com/wuzue/cryptoview-server
+```
+
+Install the server dependencies:
+```
+npm i
+```
+
+And run the server with:
+```
+nodemon index.js
+```
+
+Note: I used MongoDB as a database for CryptoView, if you want to do the same, remember to setup your database there before running the server.
+After it is created, create a ```.env``` file in project root folder with a variable with the SAME name as the variable in ```db/dbConnect.js```. By default, it is called DB_URL, but you can name it whatever you want.
+And set the value as your MongoDB database key.
+for example:
+```
+DB_URL=mongodb+srv://<YOURUSERNAME>:<YOURPASSWORD>@cluster0.san3z5m.mongodb.net/|<DB>?retryWrites=true&w=majority
 ```
