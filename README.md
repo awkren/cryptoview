@@ -13,7 +13,7 @@
 Besides showing you info about cryptocurrencies, it features a login/registration system that makes possible for users to create, and login to their accounts.
 Plus, it has an Auth system that checks users credentials through a unique token.
 
-## 🚀 How to run CryptoView locally?
+## How to run CryptoView locally?
 
 Clone the repo to your computer:
 ```
