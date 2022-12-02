@@ -33,7 +33,7 @@ npm start
 
 ## How to setup CryptoView server?
 
-First, <a href='https://github.com/wuzue/cryptoview-server'>clone this repository with:</a>
+First, <a href='https://github.com/wuzue/cryptoview-server'>clone this repository</a> with:
 ```
 git clone https://github.com/wuzue/cryptoview-server
 ```
