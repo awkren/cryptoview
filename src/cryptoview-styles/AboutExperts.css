@@ -12,7 +12,7 @@ box-shadow: 0 5rem 5rem rgba(0,0,0,.7);
   margin-left: -10rem;
 }
 
-@media screen and (max-width:940px){
+@media screen and (max-width:1281px){
   #main-about-experts{
     grid-template-columns: 1fr;
     justify-content: center;
@@ -31,5 +31,12 @@ box-shadow: 0 5rem 5rem rgba(0,0,0,.7);
   #news{
     gap:1.5rem;
     
+  }
+}
+
+@media (max-width:1612px){
+  .on-experts{
+    width: 80%;
+    margin: auto;
   }
 }
