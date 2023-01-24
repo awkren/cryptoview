@@ -8,6 +8,8 @@
 
 > CryptoView is a coin hub where you can track the price of the 30 most popular coins in the moment.
 
+*CryptoView runs on Railway free tier, so the back-end might be offline during the last week of the month. If you want to try our app, you should consider running on your machine
+
 ### More about CryptoView
 
 Besides showing you info about cryptocurrencies, it features a login/registration system that makes possible for users to create, and login to their accounts.
